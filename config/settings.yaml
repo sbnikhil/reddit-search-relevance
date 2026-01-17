@@ -1,0 +1,39 @@
+database:
+  project_id: "reddit-search-relevance"
+  dataset: "reddit_relevance"
+  source_table: "reddit-search-relevance.reddit_relevance.final_training_set"
+  
+features:
+  min_upvote_threshold: 10
+  utility_keywords: ["fixed", "solved", "solution", "worked", "thank you", "step by step", "helped"]
+
+training:
+  model_name: "bert-base-uncased"
+  extra_feature_dim: 2 
+  batch_size: 32
+  epochs: 10
+  learning_rate: 0.00002
+  val_split: 0.15
+
+model:
+  encoder_name: "all-MiniLM-L6-v2"  
+  vector_dimension: 384
+
+data_processing:
+  max_sequence_length: 128 
+  min_reputation_score: 0.0 
+  
+model_params:
+  position_debiasing: true 
+  dropout_rate: 0.1 
+
+artifacts:
+  model_path: "./models/registry/"
+  version: "1.0.1"
+  export_format: "ONNX"
+
+search_tuning:
+  solr_url: "http://localhost:8983/solr/technical_search"
+  k_recall: 50
+  alpha: 0.2
+  bert_power: 1.0

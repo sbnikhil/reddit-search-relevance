@@ -1,0 +1,22 @@
+install:
+	pip install -r requirements.txt
+
+data:
+	@echo "Generating embeddings and features..."
+	PYTHONPATH=. python scripts/generate_embeddings.py
+	@echo "Ingesting data into Solr..."
+	PYTHONPATH=. python scripts/ingest_to_solr.py
+
+train:
+	@echo "Training the PyTorch Ranker..."
+	PYTHONPATH=. python scripts/train_ranker.py
+
+run:
+	@echo "Launching Search UI..."
+	PYTHONPATH=. python app.py
+
+# Clean Solr index
+clean-solr:
+	curl "http://localhost:8983/solr/technical_search/update?commit=true" \
+	-H "Content-Type: text/xml" \
+	--data-binary '<delete><query>*:*</query></delete>'

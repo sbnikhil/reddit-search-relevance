@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+
+# Model artifacts
+models/registry/*.pt
+models/registry/*.onnx
+models/registry/scaler.pkl
+
+# Keep normalization params
+!models/registry/feature_norm_params.json
+
+# Solr data
+infra/solr/solr-data/*/data/
+*.lock
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# BigQuery credentials
+*.json
+!config/settings.yaml
+!models/registry/feature_norm_params.json
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Documentation (local only)
+FILE_AUDIT.md
+PROJECT_STATUS.md
+IMPLEMENTATION_PLAN.md
+ACTION_PLAN.md
