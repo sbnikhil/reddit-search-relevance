@@ -1,0 +1,10 @@
+services:
+  solr:
+    image: solr:9.4 
+    ports:
+      - "8983:8983" 
+    volumes:
+      - ./solr-data:/var/solr/data
+    command:
+      - solr-precreate
+      - reddit_posts 

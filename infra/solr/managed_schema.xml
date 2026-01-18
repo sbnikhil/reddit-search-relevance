@@ -1,0 +1,8 @@
+<field name="post_title" type="text_general" indexed="true" stored="true"/>
+<field name="post_body" type="text_general" indexed="true" stored="true"/>
+
+<field name="topical_focus_score" type="pfloat" indexed="true" stored="true" default="0.0"/>
+<field name="utility_score" type="pint" indexed="true" stored="true" default="0"/>
+
+<fieldType name="vector" class="solr.DenseVectorField" vectorDimension="384" similarityFunction="cosine"/>
+<field name="content_vector" type="vector" indexed="true" stored="true"/>
