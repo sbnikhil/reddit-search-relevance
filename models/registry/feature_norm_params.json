@@ -1,0 +1,6 @@
+{
+  "expertise_min": 0.0,
+  "expertise_max": 1000.0,
+  "utility_min": 0.0,
+  "utility_max": 2.0
+}
