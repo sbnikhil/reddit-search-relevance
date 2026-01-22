@@ -30,29 +30,6 @@ Standard keyword-based search engines struggle with understanding context and in
 - **Apache Airflow** - Workflow automation
 - **Ray** - Distributed hyperparameter tuning
 
-## Architecture
-
-```
-┌──────────────┐
-│  BigQuery    │  Feature extraction (expertise, utility scores)
-└──────┬───────┘
-       │
-       v
-┌──────────────┐
-│  Solr Index  │  BM25 retrieval → Top 50 candidates
-└──────┬───────┘
-       │
-       v
-┌──────────────┐
-│ BERT Ranker  │  Semantic scoring + feature injection
-└──────┬───────┘
-       │
-       v
-┌──────────────┐
-│ Hybrid Score │  α × Solr + (1-α) × BERT
-└──────────────┘
-```
-
 ## Model Architecture
 
 **RedditRelevanceRanker**: Custom neural network combining:
