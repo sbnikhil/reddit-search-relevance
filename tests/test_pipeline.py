@@ -1,5 +1,12 @@
 import pytest
-from data.pipelines.utility_extractor import MarkUtility
+
+try:
+    from data.pipelines.utility_extractor import MarkUtility
+    APACHE_BEAM_AVAILABLE = True
+except ImportError:
+    APACHE_BEAM_AVAILABLE = False
+
+pytestmark = pytest.mark.skipif(not APACHE_BEAM_AVAILABLE, reason="apache_beam not installed")
 
 
 def test_utility_keyword_detection():
