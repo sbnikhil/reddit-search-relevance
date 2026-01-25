@@ -1,6 +1,6 @@
 {
-  "expertise_min": 0.0,
-  "expertise_max": 1000.0,
-  "utility_min": 0.0,
-  "utility_max": 2.0
+  "expertise_min": 0.102,
+  "expertise_max": 0.95,
+  "utility_min": 0.002,
+  "utility_max": 0.996
 }

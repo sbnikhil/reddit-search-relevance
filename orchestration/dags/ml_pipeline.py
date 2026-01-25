@@ -36,9 +36,13 @@ with DAG(
         python_callable=run_utility_pipeline,
     )
 
+    def run_ingestion():
+        from scripts.ingest_to_solr import main
+        main()
+    
     task_ingestion = PythonOperator(
         task_id='ingest_to_solr',
-        python_callable=lambda: print("Ingestion task - implement batch_index call"),
+        python_callable=run_ingestion,
     )
 
     task_training = PythonOperator(

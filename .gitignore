@@ -46,8 +46,14 @@ logs/
 .DS_Store
 Thumbs.db
 
-# BigQuery credentials
-*.json
+# BigQuery credentials (specific patterns)
+credentials.json
+*-key.json
+service-account*.json
+
+# But keep config and test files
+!config/*.json
+!tests/**/*.json
 !config/settings.yaml
 !models/registry/feature_norm_params.json
 

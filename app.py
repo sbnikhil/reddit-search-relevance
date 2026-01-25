@@ -21,7 +21,10 @@ else:
     print("Warning: No normalization params found, using defaults")
     norm_params = {'expertise_min': 0, 'expertise_max': 1, 'utility_min': 0, 'utility_max': 1}
 
-device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+try:
+    device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+except:
+    device = torch.device("cpu")
 
 # Initialize Solr
 solr = pysolr.Solr(cfg['search_tuning']['solr_url'], timeout=10)
@@ -40,10 +43,15 @@ model_file = f"reddit_ranker_v{cfg['artifacts']['version']}.pt"
 model_path = os.path.join(cfg['artifacts']['model_path'], model_file)
 
 if os.path.exists(model_path):
-    model.load_state_dict(torch.load(model_path, map_location=device))
-    print(f"Loaded model: {model_file}")
+    try:
+        model.load_state_dict(torch.load(model_path, map_location=device))
+        print(f"Loaded model: {model_file}")
+    except Exception as e:
+        print(f"Error loading model: {e}")
+        exit(1)
 else:
     print(f"Error: Model not found at {model_path}")
+    print(f"Run 'make train' to create the model first")
     exit(1)
 
 model.eval()

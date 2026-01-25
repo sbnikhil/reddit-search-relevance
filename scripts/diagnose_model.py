@@ -13,7 +13,10 @@ from models.arch.relevance_ranker import RedditRelevanceRanker
 with open("config/settings.yaml", "r") as f:
     cfg = yaml.safe_load(f)
 
-device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+try:
+    device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+except:
+    device = torch.device("cpu")
 tokenizer = AutoTokenizer.from_pretrained(cfg['training']['model_name'])
 bq_client = bigquery.Client(project=cfg['database']['project_id'])
 

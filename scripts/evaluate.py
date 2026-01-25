@@ -21,10 +21,13 @@ if os.path.exists(norm_params_path):
         norm_params = json.load(f)
     print(f"Loaded feature normalization params: {norm_params}")
 else:
-    print("⚠️  Warning: No normalization params found, using defaults [0,1]")
+    print("Warning: No normalization params found, using defaults [0,1]")
     norm_params = {'expertise_min': 0, 'expertise_max': 1, 'utility_min': 0, 'utility_max': 1}
 
-device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+try:
+    device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+except:
+    device = torch.device("cpu")
 tokenizer = AutoTokenizer.from_pretrained(cfg['training']['model_name'])
 bq_client = bigquery.Client(project=cfg['database']['project_id']) 
 solr = pysolr.Solr(cfg['search_tuning']['solr_url'], timeout=10)

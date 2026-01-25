@@ -1,22 +1,73 @@
+.PHONY: install test lint clean docker-build docker-up docker-down train evaluate export
+
 install:
 	pip install -r requirements.txt
 
-data:
-	@echo "Generating embeddings and features..."
-	PYTHONPATH=. python scripts/generate_embeddings.py
-	@echo "Ingesting data into Solr..."
-	PYTHONPATH=. python scripts/ingest_to_solr.py
+test:
+	pytest tests/ -v --cov=. --cov-report=html
+
+lint:
+	flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+	black --check .
+
+format:
+	black .
+
+clean:
+	find . -type d -name __pycache__ -exec rm -rf {} +
+	find . -type f -name "*.pyc" -delete
+	rm -rf .pytest_cache htmlcov .coverage
+
+docker-build:
+	docker-compose build
+
+docker-up:
+	docker-compose up -d
+
+docker-down:
+	docker-compose down
+
+docker-logs:
+	docker-compose logs -f
 
 train:
-	@echo "Training the PyTorch Ranker..."
 	PYTHONPATH=. python scripts/train_ranker.py
 
-run:
-	@echo "Launching Search UI..."
-	PYTHONPATH=. python app.py
+evaluate:
+	PYTHONPATH=. python scripts/evaluate.py
 
-# Clean Solr index
-clean-solr:
-	curl "http://localhost:8983/solr/technical_search/update?commit=true" \
-	-H "Content-Type: text/xml" \
-	--data-binary '<delete><query>*:*</query></delete>'
+export:
+	PYTHONPATH=. python scripts/export_to_onnx.py
+
+ingest:
+	PYTHONPATH=. python scripts/ingest_to_solr.py
+
+streamlit:
+	streamlit run streamlit_app.py
+
+create-samples:
+	PYTHONPATH=. python scripts/create_sample_data.py
+
+ingest-samples:
+	PYTHONPATH=. python scripts/ingest_to_solr.py
+
+demo-setup: create-samples train export
+	@echo "✅ Demo setup complete! Run: make streamlit"
+
+help:
+	@echo "Available commands:"
+	@echo "  make install      - Install Python dependencies"
+	@echo "  make test         - Run tests with coverage"
+	@echo "  make lint         - Check code quality"
+	@echo "  make format       - Format code with black"
+	@echo "  make clean        - Remove cache files"
+	@echo "  make docker-build - Build Docker images"
+	@echo "  make docker-up    - Start all services"
+	@echo "  make docker-down  - Stop all services"
+	@echo "  make train        - Train the model"
+	@echo "  make evaluate     - Run evaluation"
+	@echo "  make export       - Export model to ONNX"
+	@echo "  make ingest       - Ingest data to Solr"
+	@echo "  make streamlit    - Run Streamlit app"
+	@echo "  make create-samples - Generate synthetic demo data"
+	@echo "  make demo-setup   - Complete demo setup (samples + train + export)"

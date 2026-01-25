@@ -1,0 +1,4002 @@
+[
+  {
+    "id": "post_253",
+    "title": "Best practices for Python with Kubernetes",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.443,
+    "utility_score": 0.351,
+    "label": 0
+  },
+  {
+    "id": "post_242",
+    "title": "Production-ready React setup",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.296,
+    "utility_score": 0.178,
+    "label": 0
+  },
+  {
+    "id": "post_140",
+    "title": "Best practices for REST API with JavaScript",
+    "body": "The key was to:\n\nWhen working with REST API, you need to consider JavaScript. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.681,
+    "utility_score": 0.771,
+    "label": 1
+  },
+  {
+    "id": "post_403",
+    "title": "Step by step JavaScript tutorial",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.313,
+    "utility_score": 0.075,
+    "label": 0
+  },
+  {
+    "id": "post_488",
+    "title": "Debugging Kubernetes issues in AWS",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.369,
+    "utility_score": 0.291,
+    "label": 0
+  },
+  {
+    "id": "post_378",
+    "title": "Python performance optimization tips",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.32,
+    "utility_score": 0.153,
+    "label": 0
+  },
+  {
+    "id": "post_292",
+    "title": "Production-ready Machine Learning setup",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.138,
+    "utility_score": 0.386,
+    "label": 0
+  },
+  {
+    "id": "post_62",
+    "title": "Step by step Kubernetes tutorial",
+    "body": "The key was to:\n\nWhen working with Kubernetes, you need to consider MongoDB. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.623,
+    "utility_score": 0.714,
+    "label": 1
+  },
+  {
+    "id": "post_422",
+    "title": "Best practices for Machine Learning with Python",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.393,
+    "utility_score": 0.332,
+    "label": 0
+  },
+  {
+    "id": "post_375",
+    "title": "Django performance optimization tips",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.376,
+    "utility_score": 0.251,
+    "label": 0
+  },
+  {
+    "id": "post_180",
+    "title": "Step by step Redis tutorial",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.47,
+    "utility_score": 0.123,
+    "label": 0
+  },
+  {
+    "id": "post_199",
+    "title": "JavaScript performance optimization tips",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.364,
+    "utility_score": 0.234,
+    "label": 0
+  },
+  {
+    "id": "post_372",
+    "title": "Step by step Kubernetes tutorial",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.324,
+    "utility_score": 0.191,
+    "label": 0
+  },
+  {
+    "id": "post_307",
+    "title": "React vs Docker comparison",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.242,
+    "utility_score": 0.118,
+    "label": 0
+  },
+  {
+    "id": "post_489",
+    "title": "Debugging React issues in Python",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.31,
+    "utility_score": 0.07,
+    "label": 0
+  },
+  {
+    "id": "post_77",
+    "title": "Best practices for Machine Learning with JavaScript",
+    "body": "This fixed the issue for me:\n\nWhen working with Machine Learning, you need to consider JavaScript. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.869,
+    "utility_score": 0.994,
+    "label": 1
+  },
+  {
+    "id": "post_357",
+    "title": "Step by step Django tutorial",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.308,
+    "utility_score": 0.079,
+    "label": 0
+  },
+  {
+    "id": "post_441",
+    "title": "Machine Learning error: how to fix?",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.426,
+    "utility_score": 0.176,
+    "label": 0
+  },
+  {
+    "id": "post_453",
+    "title": "How do I Kubernetes in Machine Learning?",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.154,
+    "utility_score": 0.309,
+    "label": 0
+  },
+  {
+    "id": "post_236",
+    "title": "Python performance optimization tips",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.283,
+    "utility_score": 0.31,
+    "label": 0
+  },
+  {
+    "id": "post_145",
+    "title": "MongoDB error: how to fix?",
+    "body": "After debugging, I found:\n\nWhen working with MongoDB, you need to consider Redis. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.648,
+    "utility_score": 0.73,
+    "label": 1
+  },
+  {
+    "id": "post_344",
+    "title": "Best practices for React with Django",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.318,
+    "utility_score": 0.087,
+    "label": 0
+  },
+  {
+    "id": "post_85",
+    "title": "Step by step Kubernetes tutorial",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.138,
+    "utility_score": 0.196,
+    "label": 0
+  },
+  {
+    "id": "post_291",
+    "title": "Production-ready MongoDB setup",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.441,
+    "utility_score": 0.176,
+    "label": 0
+  },
+  {
+    "id": "post_208",
+    "title": "Best practices for Machine Learning with MongoDB",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.303,
+    "utility_score": 0.055,
+    "label": 0
+  },
+  {
+    "id": "post_214",
+    "title": "MongoDB performance optimization tips",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.438,
+    "utility_score": 0.086,
+    "label": 0
+  },
+  {
+    "id": "post_354",
+    "title": "Production-ready Docker setup",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.253,
+    "utility_score": 0.19,
+    "label": 0
+  },
+  {
+    "id": "post_321",
+    "title": "How do I JavaScript in Django?",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.316,
+    "utility_score": 0.183,
+    "label": 0
+  },
+  {
+    "id": "post_17",
+    "title": "Best practices for REST API with Python",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.398,
+    "utility_score": 0.247,
+    "label": 0
+  },
+  {
+    "id": "post_76",
+    "title": "Best practices for Redis with Docker",
+    "body": "After debugging, I found:\n\nWhen working with Redis, you need to consider Docker. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.75,
+    "utility_score": 0.978,
+    "label": 1
+  },
+  {
+    "id": "post_407",
+    "title": "How do I AWS in Python?",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.486,
+    "utility_score": 0.346,
+    "label": 0
+  },
+  {
+    "id": "post_239",
+    "title": "Debugging PostgreSQL issues in JavaScript",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.17,
+    "utility_score": 0.013,
+    "label": 0
+  },
+  {
+    "id": "post_258",
+    "title": "PostgreSQL performance optimization tips",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.305,
+    "utility_score": 0.119,
+    "label": 0
+  },
+  {
+    "id": "post_88",
+    "title": "Kubernetes error: how to fix?",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.434,
+    "utility_score": 0.251,
+    "label": 0
+  },
+  {
+    "id": "post_33",
+    "title": "Django performance optimization tips",
+    "body": "The key was to:\n\nWhen working with Django, you need to consider MongoDB. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.88,
+    "utility_score": 0.97,
+    "label": 1
+  },
+  {
+    "id": "post_426",
+    "title": "Debugging React issues in Redis",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.2,
+    "utility_score": 0.359,
+    "label": 0
+  },
+  {
+    "id": "post_374",
+    "title": "How do I REST API in React?",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.44,
+    "utility_score": 0.332,
+    "label": 0
+  },
+  {
+    "id": "post_389",
+    "title": "Debugging REST API issues in Docker",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.369,
+    "utility_score": 0.357,
+    "label": 0
+  },
+  {
+    "id": "post_410",
+    "title": "Best practices for Docker with REST API",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.355,
+    "utility_score": 0.29,
+    "label": 0
+  },
+  {
+    "id": "post_460",
+    "title": "Step by step Kubernetes tutorial",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.369,
+    "utility_score": 0.099,
+    "label": 0
+  },
+  {
+    "id": "post_346",
+    "title": "Redis performance optimization tips",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.139,
+    "utility_score": 0.227,
+    "label": 0
+  },
+  {
+    "id": "post_312",
+    "title": "Django vs Python comparison",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.365,
+    "utility_score": 0.06,
+    "label": 0
+  },
+  {
+    "id": "post_82",
+    "title": "Docker vs JavaScript comparison",
+    "body": "Solved! Here's what worked:\n\nWhen working with Docker, you need to consider JavaScript. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.947,
+    "utility_score": 0.726,
+    "label": 1
+  },
+  {
+    "id": "post_314",
+    "title": "REST API performance optimization tips",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.167,
+    "utility_score": 0.319,
+    "label": 0
+  },
+  {
+    "id": "post_200",
+    "title": "Production-ready React setup",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.169,
+    "utility_score": 0.291,
+    "label": 0
+  },
+  {
+    "id": "post_435",
+    "title": "Best practices for REST API with React",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.29,
+    "utility_score": 0.23,
+    "label": 0
+  },
+  {
+    "id": "post_118",
+    "title": "Debugging Django issues in JavaScript",
+    "body": "Step by step solution:\n\nWhen working with Django, you need to consider JavaScript. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.802,
+    "utility_score": 0.918,
+    "label": 1
+  },
+  {
+    "id": "post_261",
+    "title": "Kubernetes performance optimization tips",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.354,
+    "utility_score": 0.125,
+    "label": 0
+  },
+  {
+    "id": "post_14",
+    "title": "Best practices for JavaScript with Python",
+    "body": "The key was to:\n\nWhen working with JavaScript, you need to consider Python. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.896,
+    "utility_score": 0.845,
+    "label": 1
+  },
+  {
+    "id": "post_269",
+    "title": "Django vs PostgreSQL comparison",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.204,
+    "utility_score": 0.165,
+    "label": 0
+  },
+  {
+    "id": "post_268",
+    "title": "Machine Learning performance optimization tips",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.261,
+    "utility_score": 0.011,
+    "label": 0
+  },
+  {
+    "id": "post_32",
+    "title": "Best practices for Django with Python",
+    "body": "Step by step solution:\n\nWhen working with Django, you need to consider Python. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.728,
+    "utility_score": 0.965,
+    "label": 1
+  },
+  {
+    "id": "post_231",
+    "title": "Docker performance optimization tips",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.277,
+    "utility_score": 0.01,
+    "label": 0
+  },
+  {
+    "id": "post_97",
+    "title": "MongoDB performance optimization tips",
+    "body": "This fixed the issue for me:\n\nWhen working with MongoDB, you need to consider PostgreSQL. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.941,
+    "utility_score": 0.787,
+    "label": 1
+  },
+  {
+    "id": "post_34",
+    "title": "Step by step Kubernetes tutorial",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.155,
+    "utility_score": 0.205,
+    "label": 0
+  },
+  {
+    "id": "post_285",
+    "title": "Production-ready Docker setup",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.207,
+    "utility_score": 0.101,
+    "label": 0
+  },
+  {
+    "id": "post_11",
+    "title": "How do I REST API in Django?",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.353,
+    "utility_score": 0.33,
+    "label": 0
+  },
+  {
+    "id": "post_179",
+    "title": "Production-ready Redis setup",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.197,
+    "utility_score": 0.234,
+    "label": 0
+  },
+  {
+    "id": "post_244",
+    "title": "Docker vs Django comparison",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.214,
+    "utility_score": 0.091,
+    "label": 0
+  },
+  {
+    "id": "post_125",
+    "title": "JavaScript error: how to fix?",
+    "body": "The key was to:\n\nWhen working with JavaScript, you need to consider Redis. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.627,
+    "utility_score": 0.9,
+    "label": 1
+  },
+  {
+    "id": "post_39",
+    "title": "JavaScript vs Docker comparison",
+    "body": "This fixed the issue for me:\n\nWhen working with JavaScript, you need to consider Docker. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.601,
+    "utility_score": 0.703,
+    "label": 1
+  },
+  {
+    "id": "post_280",
+    "title": "How do I PostgreSQL in Django?",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.146,
+    "utility_score": 0.156,
+    "label": 0
+  },
+  {
+    "id": "post_466",
+    "title": "Debugging Redis issues in JavaScript",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.297,
+    "utility_score": 0.19,
+    "label": 0
+  },
+  {
+    "id": "post_461",
+    "title": "Debugging Redis issues in Django",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.382,
+    "utility_score": 0.272,
+    "label": 0
+  },
+  {
+    "id": "post_13",
+    "title": "Production-ready Kubernetes setup",
+    "body": "Solved! Here's what worked:\n\nWhen working with Kubernetes, you need to consider Machine Learning. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.724,
+    "utility_score": 0.807,
+    "label": 1
+  },
+  {
+    "id": "post_84",
+    "title": "Best practices for REST API with JavaScript",
+    "body": "The key was to:\n\nWhen working with REST API, you need to consider JavaScript. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.949,
+    "utility_score": 0.727,
+    "label": 1
+  },
+  {
+    "id": "post_257",
+    "title": "Kubernetes error: how to fix?",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.129,
+    "utility_score": 0.112,
+    "label": 0
+  },
+  {
+    "id": "post_264",
+    "title": "JavaScript performance optimization tips",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.147,
+    "utility_score": 0.071,
+    "label": 0
+  },
+  {
+    "id": "post_481",
+    "title": "Debugging JavaScript issues in Kubernetes",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.464,
+    "utility_score": 0.281,
+    "label": 0
+  },
+  {
+    "id": "post_124",
+    "title": "Debugging Redis issues in REST API",
+    "body": "Step by step solution:\n\nWhen working with Redis, you need to consider REST API. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.684,
+    "utility_score": 0.874,
+    "label": 1
+  },
+  {
+    "id": "post_130",
+    "title": "Docker error: how to fix?",
+    "body": "The key was to:\n\nWhen working with Docker, you need to consider React. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.859,
+    "utility_score": 0.893,
+    "label": 1
+  },
+  {
+    "id": "post_304",
+    "title": "React vs Django comparison",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.217,
+    "utility_score": 0.284,
+    "label": 0
+  },
+  {
+    "id": "post_388",
+    "title": "Step by step REST API tutorial",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.295,
+    "utility_score": 0.328,
+    "label": 0
+  },
+  {
+    "id": "post_44",
+    "title": "JavaScript performance optimization tips",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.402,
+    "utility_score": 0.117,
+    "label": 0
+  },
+  {
+    "id": "post_229",
+    "title": "How do I REST API in JavaScript?",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.157,
+    "utility_score": 0.317,
+    "label": 0
+  },
+  {
+    "id": "post_174",
+    "title": "How do I Docker in JavaScript?",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.494,
+    "utility_score": 0.162,
+    "label": 0
+  },
+  {
+    "id": "post_351",
+    "title": "Docker vs AWS comparison",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.21,
+    "utility_score": 0.284,
+    "label": 0
+  },
+  {
+    "id": "post_458",
+    "title": "Django error: how to fix?",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.249,
+    "utility_score": 0.058,
+    "label": 0
+  },
+  {
+    "id": "post_186",
+    "title": "Best practices for Machine Learning with Kubernetes",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.279,
+    "utility_score": 0.319,
+    "label": 0
+  },
+  {
+    "id": "post_475",
+    "title": "Kubernetes vs React comparison",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.17,
+    "utility_score": 0.346,
+    "label": 0
+  },
+  {
+    "id": "post_383",
+    "title": "Step by step Machine Learning tutorial",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.446,
+    "utility_score": 0.321,
+    "label": 0
+  },
+  {
+    "id": "post_448",
+    "title": "Best practices for JavaScript with React",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.41,
+    "utility_score": 0.034,
+    "label": 0
+  },
+  {
+    "id": "post_149",
+    "title": "Production-ready PostgreSQL setup",
+    "body": "Solved! Here's what worked:\n\nWhen working with PostgreSQL, you need to consider Django. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.76,
+    "utility_score": 0.873,
+    "label": 1
+  },
+  {
+    "id": "post_396",
+    "title": "Best practices for Machine Learning with REST API",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.4,
+    "utility_score": 0.309,
+    "label": 0
+  },
+  {
+    "id": "post_456",
+    "title": "Step by step Docker tutorial",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.186,
+    "utility_score": 0.352,
+    "label": 0
+  },
+  {
+    "id": "post_256",
+    "title": "Docker vs MongoDB comparison",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.289,
+    "utility_score": 0.062,
+    "label": 0
+  },
+  {
+    "id": "post_141",
+    "title": "How do I Redis in JavaScript?",
+    "body": "This fixed the issue for me:\n\nWhen working with Redis, you need to consider JavaScript. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.756,
+    "utility_score": 0.776,
+    "label": 1
+  },
+  {
+    "id": "post_146",
+    "title": "How do I JavaScript in Docker?",
+    "body": "The key was to:\n\nWhen working with JavaScript, you need to consider Docker. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.909,
+    "utility_score": 0.937,
+    "label": 1
+  },
+  {
+    "id": "post_493",
+    "title": "How do I Machine Learning in Django?",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.335,
+    "utility_score": 0.274,
+    "label": 0
+  },
+  {
+    "id": "post_101",
+    "title": "How do I Django in JavaScript?",
+    "body": "This fixed the issue for me:\n\nWhen working with Django, you need to consider JavaScript. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.888,
+    "utility_score": 0.722,
+    "label": 1
+  },
+  {
+    "id": "post_430",
+    "title": "Python performance optimization tips",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.308,
+    "utility_score": 0.003,
+    "label": 0
+  },
+  {
+    "id": "post_148",
+    "title": "Step by step JavaScript tutorial",
+    "body": "This fixed the issue for me:\n\nWhen working with JavaScript, you need to consider AWS. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.757,
+    "utility_score": 0.932,
+    "label": 1
+  },
+  {
+    "id": "post_49",
+    "title": "Best practices for Machine Learning with PostgreSQL",
+    "body": "The key was to:\n\nWhen working with Machine Learning, you need to consider PostgreSQL. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.638,
+    "utility_score": 0.732,
+    "label": 1
+  },
+  {
+    "id": "post_337",
+    "title": "AWS error: how to fix?",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.247,
+    "utility_score": 0.254,
+    "label": 0
+  },
+  {
+    "id": "post_284",
+    "title": "Production-ready REST API setup",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.279,
+    "utility_score": 0.111,
+    "label": 0
+  },
+  {
+    "id": "post_356",
+    "title": "React error: how to fix?",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.411,
+    "utility_score": 0.242,
+    "label": 0
+  },
+  {
+    "id": "post_421",
+    "title": "How do I PostgreSQL in REST API?",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.318,
+    "utility_score": 0.077,
+    "label": 0
+  },
+  {
+    "id": "post_381",
+    "title": "Kubernetes error: how to fix?",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.329,
+    "utility_score": 0.25,
+    "label": 0
+  },
+  {
+    "id": "post_230",
+    "title": "How do I JavaScript in Python?",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.372,
+    "utility_score": 0.249,
+    "label": 0
+  },
+  {
+    "id": "post_341",
+    "title": "How do I Docker in Redis?",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.241,
+    "utility_score": 0.381,
+    "label": 0
+  },
+  {
+    "id": "post_391",
+    "title": "Best practices for PostgreSQL with MongoDB",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.378,
+    "utility_score": 0.228,
+    "label": 0
+  },
+  {
+    "id": "post_150",
+    "title": "Debugging MongoDB issues in REST API",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.102,
+    "utility_score": 0.238,
+    "label": 0
+  },
+  {
+    "id": "post_479",
+    "title": "Step by step PostgreSQL tutorial",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.157,
+    "utility_score": 0.39,
+    "label": 0
+  },
+  {
+    "id": "post_331",
+    "title": "Production-ready Django setup",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.105,
+    "utility_score": 0.083,
+    "label": 0
+  },
+  {
+    "id": "post_210",
+    "title": "How do I Django in Machine Learning?",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.451,
+    "utility_score": 0.259,
+    "label": 0
+  },
+  {
+    "id": "post_385",
+    "title": "REST API error: how to fix?",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.325,
+    "utility_score": 0.349,
+    "label": 0
+  },
+  {
+    "id": "post_135",
+    "title": "Best practices for Redis with Python",
+    "body": "The key was to:\n\nWhen working with Redis, you need to consider Python. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.62,
+    "utility_score": 0.899,
+    "label": 1
+  },
+  {
+    "id": "post_87",
+    "title": "Best practices for React with PostgreSQL",
+    "body": "Step by step solution:\n\nWhen working with React, you need to consider PostgreSQL. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.82,
+    "utility_score": 0.928,
+    "label": 1
+  },
+  {
+    "id": "post_325",
+    "title": "JavaScript performance optimization tips",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.237,
+    "utility_score": 0.21,
+    "label": 0
+  },
+  {
+    "id": "post_52",
+    "title": "JavaScript performance optimization tips",
+    "body": "Solved! Here's what worked:\n\nWhen working with JavaScript, you need to consider Machine Learning. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.65,
+    "utility_score": 0.889,
+    "label": 1
+  },
+  {
+    "id": "post_382",
+    "title": "Production-ready Kubernetes setup",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.289,
+    "utility_score": 0.308,
+    "label": 0
+  },
+  {
+    "id": "post_75",
+    "title": "Debugging Docker issues in PostgreSQL",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.115,
+    "utility_score": 0.325,
+    "label": 0
+  },
+  {
+    "id": "post_363",
+    "title": "Debugging Kubernetes issues in Python",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.222,
+    "utility_score": 0.295,
+    "label": 0
+  },
+  {
+    "id": "post_252",
+    "title": "Redis vs Django comparison",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.406,
+    "utility_score": 0.301,
+    "label": 0
+  },
+  {
+    "id": "post_116",
+    "title": "Production-ready Redis setup",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.345,
+    "utility_score": 0.339,
+    "label": 0
+  },
+  {
+    "id": "post_498",
+    "title": "Production-ready Kubernetes setup",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.289,
+    "utility_score": 0.037,
+    "label": 0
+  },
+  {
+    "id": "post_227",
+    "title": "REST API performance optimization tips",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.208,
+    "utility_score": 0.161,
+    "label": 0
+  },
+  {
+    "id": "post_348",
+    "title": "Machine Learning vs Docker comparison",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.106,
+    "utility_score": 0.01,
+    "label": 0
+  },
+  {
+    "id": "post_194",
+    "title": "Production-ready Machine Learning setup",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.4,
+    "utility_score": 0.168,
+    "label": 0
+  },
+  {
+    "id": "post_283",
+    "title": "Redis vs React comparison",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.418,
+    "utility_score": 0.365,
+    "label": 0
+  },
+  {
+    "id": "post_157",
+    "title": "Best practices for AWS with PostgreSQL",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.296,
+    "utility_score": 0.125,
+    "label": 0
+  },
+  {
+    "id": "post_192",
+    "title": "Django vs AWS comparison",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.231,
+    "utility_score": 0.151,
+    "label": 0
+  },
+  {
+    "id": "post_156",
+    "title": "Step by step MongoDB tutorial",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.389,
+    "utility_score": 0.291,
+    "label": 0
+  },
+  {
+    "id": "post_339",
+    "title": "Machine Learning vs Django comparison",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.141,
+    "utility_score": 0.215,
+    "label": 0
+  },
+  {
+    "id": "post_392",
+    "title": "Best practices for AWS with PostgreSQL",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.22,
+    "utility_score": 0.341,
+    "label": 0
+  },
+  {
+    "id": "post_469",
+    "title": "Step by step Django tutorial",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.436,
+    "utility_score": 0.184,
+    "label": 0
+  },
+  {
+    "id": "post_129",
+    "title": "MongoDB error: how to fix?",
+    "body": "Step by step solution:\n\nWhen working with MongoDB, you need to consider Redis. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.9,
+    "utility_score": 0.744,
+    "label": 1
+  },
+  {
+    "id": "post_429",
+    "title": "AWS error: how to fix?",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.103,
+    "utility_score": 0.082,
+    "label": 0
+  },
+  {
+    "id": "post_8",
+    "title": "Best practices for MongoDB with PostgreSQL",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.105,
+    "utility_score": 0.293,
+    "label": 0
+  },
+  {
+    "id": "post_343",
+    "title": "Best practices for React with JavaScript",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.14,
+    "utility_score": 0.073,
+    "label": 0
+  },
+  {
+    "id": "post_102",
+    "title": "MongoDB error: how to fix?",
+    "body": "This fixed the issue for me:\n\nWhen working with MongoDB, you need to consider PostgreSQL. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.851,
+    "utility_score": 0.861,
+    "label": 1
+  },
+  {
+    "id": "post_94",
+    "title": "REST API error: how to fix?",
+    "body": "After debugging, I found:\n\nWhen working with REST API, you need to consider React. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.821,
+    "utility_score": 0.77,
+    "label": 1
+  },
+  {
+    "id": "post_444",
+    "title": "How do I Redis in Django?",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.36,
+    "utility_score": 0.207,
+    "label": 0
+  },
+  {
+    "id": "post_436",
+    "title": "Step by step REST API tutorial",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.362,
+    "utility_score": 0.013,
+    "label": 0
+  },
+  {
+    "id": "post_223",
+    "title": "Debugging Django issues in Machine Learning",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.125,
+    "utility_score": 0.007,
+    "label": 0
+  },
+  {
+    "id": "post_193",
+    "title": "Python vs Machine Learning comparison",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.373,
+    "utility_score": 0.262,
+    "label": 0
+  },
+  {
+    "id": "post_178",
+    "title": "REST API error: how to fix?",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.219,
+    "utility_score": 0.021,
+    "label": 0
+  },
+  {
+    "id": "post_136",
+    "title": "MongoDB error: how to fix?",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.484,
+    "utility_score": 0.01,
+    "label": 0
+  },
+  {
+    "id": "post_100",
+    "title": "Step by step Redis tutorial",
+    "body": "Solved! Here's what worked:\n\nWhen working with Redis, you need to consider JavaScript. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.943,
+    "utility_score": 0.811,
+    "label": 1
+  },
+  {
+    "id": "post_83",
+    "title": "Step by step Docker tutorial",
+    "body": "This fixed the issue for me:\n\nWhen working with Docker, you need to consider Kubernetes. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.836,
+    "utility_score": 0.736,
+    "label": 1
+  },
+  {
+    "id": "post_81",
+    "title": "JavaScript vs MongoDB comparison",
+    "body": "This fixed the issue for me:\n\nWhen working with JavaScript, you need to consider MongoDB. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.822,
+    "utility_score": 0.757,
+    "label": 1
+  },
+  {
+    "id": "post_329",
+    "title": "Best practices for React with JavaScript",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.399,
+    "utility_score": 0.182,
+    "label": 0
+  },
+  {
+    "id": "post_151",
+    "title": "Production-ready Django setup",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.385,
+    "utility_score": 0.239,
+    "label": 0
+  },
+  {
+    "id": "post_41",
+    "title": "Step by step Python tutorial",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.498,
+    "utility_score": 0.078,
+    "label": 0
+  },
+  {
+    "id": "post_276",
+    "title": "How do I Docker in React?",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.165,
+    "utility_score": 0.199,
+    "label": 0
+  },
+  {
+    "id": "post_29",
+    "title": "Debugging PostgreSQL issues in JavaScript",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.417,
+    "utility_score": 0.248,
+    "label": 0
+  },
+  {
+    "id": "post_47",
+    "title": "How do I Python in Redis?",
+    "body": "The key was to:\n\nWhen working with Python, you need to consider Redis. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.929,
+    "utility_score": 0.834,
+    "label": 1
+  },
+  {
+    "id": "post_431",
+    "title": "Production-ready PostgreSQL setup",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.407,
+    "utility_score": 0.117,
+    "label": 0
+  },
+  {
+    "id": "post_487",
+    "title": "Best practices for Kubernetes with Redis",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.252,
+    "utility_score": 0.306,
+    "label": 0
+  },
+  {
+    "id": "post_160",
+    "title": "How do I Docker in React?",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.374,
+    "utility_score": 0.299,
+    "label": 0
+  },
+  {
+    "id": "post_222",
+    "title": "Best practices for JavaScript with Python",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.458,
+    "utility_score": 0.249,
+    "label": 0
+  },
+  {
+    "id": "post_3",
+    "title": "Debugging PostgreSQL issues in AWS",
+    "body": "Step by step solution:\n\nWhen working with PostgreSQL, you need to consider AWS. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.908,
+    "utility_score": 0.933,
+    "label": 1
+  },
+  {
+    "id": "post_467",
+    "title": "How do I Docker in PostgreSQL?",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.125,
+    "utility_score": 0.095,
+    "label": 0
+  },
+  {
+    "id": "post_298",
+    "title": "Python performance optimization tips",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.134,
+    "utility_score": 0.313,
+    "label": 0
+  },
+  {
+    "id": "post_183",
+    "title": "Debugging React issues in Kubernetes",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.157,
+    "utility_score": 0.003,
+    "label": 0
+  },
+  {
+    "id": "post_452",
+    "title": "JavaScript error: how to fix?",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.45,
+    "utility_score": 0.29,
+    "label": 0
+  },
+  {
+    "id": "post_5",
+    "title": "Production-ready Kubernetes setup",
+    "body": "Step by step solution:\n\nWhen working with Kubernetes, you need to consider Docker. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.866,
+    "utility_score": 0.743,
+    "label": 1
+  },
+  {
+    "id": "post_384",
+    "title": "Redis vs React comparison",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.235,
+    "utility_score": 0.021,
+    "label": 0
+  },
+  {
+    "id": "post_395",
+    "title": "Debugging Docker issues in Python",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.136,
+    "utility_score": 0.075,
+    "label": 0
+  },
+  {
+    "id": "post_463",
+    "title": "PostgreSQL performance optimization tips",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.193,
+    "utility_score": 0.048,
+    "label": 0
+  },
+  {
+    "id": "post_271",
+    "title": "How do I React in Kubernetes?",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.167,
+    "utility_score": 0.331,
+    "label": 0
+  },
+  {
+    "id": "post_235",
+    "title": "How do I Machine Learning in React?",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.124,
+    "utility_score": 0.355,
+    "label": 0
+  },
+  {
+    "id": "post_409",
+    "title": "How do I AWS in Kubernetes?",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.23,
+    "utility_score": 0.259,
+    "label": 0
+  },
+  {
+    "id": "post_332",
+    "title": "Step by step Redis tutorial",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.424,
+    "utility_score": 0.063,
+    "label": 0
+  },
+  {
+    "id": "post_309",
+    "title": "Docker error: how to fix?",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.183,
+    "utility_score": 0.104,
+    "label": 0
+  },
+  {
+    "id": "post_38",
+    "title": "Debugging REST API issues in PostgreSQL",
+    "body": "After debugging, I found:\n\nWhen working with REST API, you need to consider PostgreSQL. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.724,
+    "utility_score": 0.864,
+    "label": 1
+  },
+  {
+    "id": "post_137",
+    "title": "Redis performance optimization tips",
+    "body": "Solved! Here's what worked:\n\nWhen working with Redis, you need to consider Django. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.894,
+    "utility_score": 0.958,
+    "label": 1
+  },
+  {
+    "id": "post_80",
+    "title": "Python vs Machine Learning comparison",
+    "body": "The key was to:\n\nWhen working with Python, you need to consider Machine Learning. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.624,
+    "utility_score": 0.872,
+    "label": 1
+  },
+  {
+    "id": "post_443",
+    "title": "MongoDB performance optimization tips",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.495,
+    "utility_score": 0.291,
+    "label": 0
+  },
+  {
+    "id": "post_58",
+    "title": "Production-ready MongoDB setup",
+    "body": "Solved! Here's what worked:\n\nWhen working with MongoDB, you need to consider Docker. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.913,
+    "utility_score": 0.759,
+    "label": 1
+  },
+  {
+    "id": "post_390",
+    "title": "Debugging Machine Learning issues in AWS",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.174,
+    "utility_score": 0.379,
+    "label": 0
+  },
+  {
+    "id": "post_190",
+    "title": "MongoDB vs REST API comparison",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.351,
+    "utility_score": 0.375,
+    "label": 0
+  },
+  {
+    "id": "post_27",
+    "title": "React error: how to fix?",
+    "body": "The key was to:\n\nWhen working with React, you need to consider Docker. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.664,
+    "utility_score": 0.856,
+    "label": 1
+  },
+  {
+    "id": "post_313",
+    "title": "React error: how to fix?",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.41,
+    "utility_score": 0.167,
+    "label": 0
+  },
+  {
+    "id": "post_464",
+    "title": "Best practices for Redis with Kubernetes",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.204,
+    "utility_score": 0.329,
+    "label": 0
+  },
+  {
+    "id": "post_43",
+    "title": "Best practices for PostgreSQL with Kubernetes",
+    "body": "The key was to:\n\nWhen working with PostgreSQL, you need to consider Kubernetes. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.798,
+    "utility_score": 0.847,
+    "label": 1
+  },
+  {
+    "id": "post_445",
+    "title": "Docker vs Kubernetes comparison",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.174,
+    "utility_score": 0.229,
+    "label": 0
+  },
+  {
+    "id": "post_0",
+    "title": "Production-ready MongoDB setup",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.283,
+    "utility_score": 0.06,
+    "label": 0
+  },
+  {
+    "id": "post_420",
+    "title": "Step by step Redis tutorial",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.18,
+    "utility_score": 0.103,
+    "label": 0
+  },
+  {
+    "id": "post_415",
+    "title": "How do I React in PostgreSQL?",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.177,
+    "utility_score": 0.231,
+    "label": 0
+  },
+  {
+    "id": "post_120",
+    "title": "Best practices for Django with MongoDB",
+    "body": "Step by step solution:\n\nWhen working with Django, you need to consider MongoDB. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.631,
+    "utility_score": 0.89,
+    "label": 1
+  },
+  {
+    "id": "post_198",
+    "title": "Step by step Redis tutorial",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.244,
+    "utility_score": 0.036,
+    "label": 0
+  },
+  {
+    "id": "post_175",
+    "title": "Machine Learning vs Django comparison",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.281,
+    "utility_score": 0.299,
+    "label": 0
+  },
+  {
+    "id": "post_423",
+    "title": "Best practices for Redis with AWS",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.412,
+    "utility_score": 0.031,
+    "label": 0
+  },
+  {
+    "id": "post_55",
+    "title": "Django error: how to fix?",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.424,
+    "utility_score": 0.148,
+    "label": 0
+  },
+  {
+    "id": "post_213",
+    "title": "Best practices for MongoDB with React",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.236,
+    "utility_score": 0.151,
+    "label": 0
+  },
+  {
+    "id": "post_334",
+    "title": "Production-ready MongoDB setup",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.22,
+    "utility_score": 0.207,
+    "label": 0
+  },
+  {
+    "id": "post_496",
+    "title": "Step by step REST API tutorial",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.133,
+    "utility_score": 0.107,
+    "label": 0
+  },
+  {
+    "id": "post_327",
+    "title": "How do I AWS in Redis?",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.459,
+    "utility_score": 0.129,
+    "label": 0
+  },
+  {
+    "id": "post_60",
+    "title": "Best practices for REST API with React",
+    "body": "The key was to:\n\nWhen working with REST API, you need to consider React. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.655,
+    "utility_score": 0.927,
+    "label": 1
+  },
+  {
+    "id": "post_168",
+    "title": "PostgreSQL performance optimization tips",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.286,
+    "utility_score": 0.377,
+    "label": 0
+  },
+  {
+    "id": "post_73",
+    "title": "Django error: how to fix?",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.319,
+    "utility_score": 0.342,
+    "label": 0
+  },
+  {
+    "id": "post_263",
+    "title": "Production-ready MongoDB setup",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.467,
+    "utility_score": 0.322,
+    "label": 0
+  },
+  {
+    "id": "post_299",
+    "title": "Step by step REST API tutorial",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.208,
+    "utility_score": 0.212,
+    "label": 0
+  },
+  {
+    "id": "post_67",
+    "title": "Production-ready Machine Learning setup",
+    "body": "Step by step solution:\n\nWhen working with Machine Learning, you need to consider Docker. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.731,
+    "utility_score": 0.843,
+    "label": 1
+  },
+  {
+    "id": "post_91",
+    "title": "Best practices for Redis with MongoDB",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.248,
+    "utility_score": 0.103,
+    "label": 0
+  },
+  {
+    "id": "post_226",
+    "title": "Kubernetes vs Django comparison",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.144,
+    "utility_score": 0.045,
+    "label": 0
+  },
+  {
+    "id": "post_362",
+    "title": "Production-ready MongoDB setup",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.49,
+    "utility_score": 0.062,
+    "label": 0
+  },
+  {
+    "id": "post_127",
+    "title": "Best practices for Machine Learning with Redis",
+    "body": "Solved! Here's what worked:\n\nWhen working with Machine Learning, you need to consider Redis. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.818,
+    "utility_score": 0.87,
+    "label": 1
+  },
+  {
+    "id": "post_399",
+    "title": "Docker error: how to fix?",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.241,
+    "utility_score": 0.036,
+    "label": 0
+  },
+  {
+    "id": "post_424",
+    "title": "Debugging Machine Learning issues in Kubernetes",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.457,
+    "utility_score": 0.368,
+    "label": 0
+  },
+  {
+    "id": "post_255",
+    "title": "MongoDB performance optimization tips",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.175,
+    "utility_score": 0.264,
+    "label": 0
+  },
+  {
+    "id": "post_35",
+    "title": "Debugging PostgreSQL issues in AWS",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.23,
+    "utility_score": 0.158,
+    "label": 0
+  },
+  {
+    "id": "post_350",
+    "title": "MongoDB error: how to fix?",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.474,
+    "utility_score": 0.194,
+    "label": 0
+  },
+  {
+    "id": "post_274",
+    "title": "Machine Learning vs Docker comparison",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.241,
+    "utility_score": 0.383,
+    "label": 0
+  },
+  {
+    "id": "post_182",
+    "title": "Production-ready React setup",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.311,
+    "utility_score": 0.13,
+    "label": 0
+  },
+  {
+    "id": "post_335",
+    "title": "How do I MongoDB in Python?",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.168,
+    "utility_score": 0.066,
+    "label": 0
+  },
+  {
+    "id": "post_386",
+    "title": "Step by step MongoDB tutorial",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.416,
+    "utility_score": 0.398,
+    "label": 0
+  },
+  {
+    "id": "post_162",
+    "title": "Step by step MongoDB tutorial",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.137,
+    "utility_score": 0.286,
+    "label": 0
+  },
+  {
+    "id": "post_40",
+    "title": "Debugging Python issues in Machine Learning",
+    "body": "This fixed the issue for me:\n\nWhen working with Python, you need to consider Machine Learning. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.913,
+    "utility_score": 0.936,
+    "label": 1
+  },
+  {
+    "id": "post_316",
+    "title": "REST API vs Python comparison",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.197,
+    "utility_score": 0.075,
+    "label": 0
+  },
+  {
+    "id": "post_323",
+    "title": "REST API performance optimization tips",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.399,
+    "utility_score": 0.218,
+    "label": 0
+  },
+  {
+    "id": "post_30",
+    "title": "Step by step PostgreSQL tutorial",
+    "body": "After debugging, I found:\n\nWhen working with PostgreSQL, you need to consider REST API. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.625,
+    "utility_score": 0.939,
+    "label": 1
+  },
+  {
+    "id": "post_89",
+    "title": "Debugging AWS issues in PostgreSQL",
+    "body": "This fixed the issue for me:\n\nWhen working with AWS, you need to consider PostgreSQL. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.679,
+    "utility_score": 0.92,
+    "label": 1
+  },
+  {
+    "id": "post_114",
+    "title": "How do I PostgreSQL in Python?",
+    "body": "This fixed the issue for me:\n\nWhen working with PostgreSQL, you need to consider Python. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.727,
+    "utility_score": 0.926,
+    "label": 1
+  },
+  {
+    "id": "post_10",
+    "title": "Debugging REST API issues in Machine Learning",
+    "body": "After debugging, I found:\n\nWhen working with REST API, you need to consider Machine Learning. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.839,
+    "utility_score": 0.916,
+    "label": 1
+  },
+  {
+    "id": "post_170",
+    "title": "Production-ready Redis setup",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.316,
+    "utility_score": 0.244,
+    "label": 0
+  },
+  {
+    "id": "post_95",
+    "title": "Best practices for Python with Machine Learning",
+    "body": "This fixed the issue for me:\n\nWhen working with Python, you need to consider Machine Learning. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.855,
+    "utility_score": 0.748,
+    "label": 1
+  },
+  {
+    "id": "post_451",
+    "title": "REST API error: how to fix?",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.422,
+    "utility_score": 0.044,
+    "label": 0
+  },
+  {
+    "id": "post_117",
+    "title": "Debugging Kubernetes issues in Python",
+    "body": "The key was to:\n\nWhen working with Kubernetes, you need to consider Python. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.766,
+    "utility_score": 0.855,
+    "label": 1
+  },
+  {
+    "id": "post_233",
+    "title": "AWS performance optimization tips",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.186,
+    "utility_score": 0.268,
+    "label": 0
+  },
+  {
+    "id": "post_450",
+    "title": "JavaScript error: how to fix?",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.315,
+    "utility_score": 0.344,
+    "label": 0
+  },
+  {
+    "id": "post_353",
+    "title": "Docker error: how to fix?",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.33,
+    "utility_score": 0.193,
+    "label": 0
+  },
+  {
+    "id": "post_155",
+    "title": "MongoDB performance optimization tips",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.151,
+    "utility_score": 0.078,
+    "label": 0
+  },
+  {
+    "id": "post_406",
+    "title": "JavaScript performance optimization tips",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.329,
+    "utility_score": 0.026,
+    "label": 0
+  },
+  {
+    "id": "post_478",
+    "title": "Debugging MongoDB issues in Redis",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.194,
+    "utility_score": 0.271,
+    "label": 0
+  },
+  {
+    "id": "post_497",
+    "title": "Debugging AWS issues in Machine Learning",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.202,
+    "utility_score": 0.285,
+    "label": 0
+  },
+  {
+    "id": "post_336",
+    "title": "AWS error: how to fix?",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.452,
+    "utility_score": 0.313,
+    "label": 0
+  },
+  {
+    "id": "post_248",
+    "title": "Machine Learning error: how to fix?",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.371,
+    "utility_score": 0.144,
+    "label": 0
+  },
+  {
+    "id": "post_23",
+    "title": "Step by step PostgreSQL tutorial",
+    "body": "Step by step solution:\n\nWhen working with PostgreSQL, you need to consider AWS. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.659,
+    "utility_score": 0.871,
+    "label": 1
+  },
+  {
+    "id": "post_465",
+    "title": "Debugging REST API issues in AWS",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.418,
+    "utility_score": 0.049,
+    "label": 0
+  },
+  {
+    "id": "post_79",
+    "title": "Machine Learning vs MongoDB comparison",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.422,
+    "utility_score": 0.284,
+    "label": 0
+  },
+  {
+    "id": "post_480",
+    "title": "Production-ready Django setup",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.203,
+    "utility_score": 0.366,
+    "label": 0
+  },
+  {
+    "id": "post_277",
+    "title": "React performance optimization tips",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.467,
+    "utility_score": 0.302,
+    "label": 0
+  },
+  {
+    "id": "post_209",
+    "title": "How do I JavaScript in React?",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.368,
+    "utility_score": 0.338,
+    "label": 0
+  },
+  {
+    "id": "post_262",
+    "title": "Debugging MongoDB issues in AWS",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.391,
+    "utility_score": 0.303,
+    "label": 0
+  },
+  {
+    "id": "post_440",
+    "title": "How do I Python in MongoDB?",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.29,
+    "utility_score": 0.147,
+    "label": 0
+  },
+  {
+    "id": "post_376",
+    "title": "Debugging JavaScript issues in Python",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.259,
+    "utility_score": 0.059,
+    "label": 0
+  },
+  {
+    "id": "post_237",
+    "title": "Step by step REST API tutorial",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.344,
+    "utility_score": 0.218,
+    "label": 0
+  },
+  {
+    "id": "post_204",
+    "title": "Production-ready REST API setup",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.363,
+    "utility_score": 0.189,
+    "label": 0
+  },
+  {
+    "id": "post_45",
+    "title": "Debugging REST API issues in Machine Learning",
+    "body": "After debugging, I found:\n\nWhen working with REST API, you need to consider Machine Learning. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.742,
+    "utility_score": 0.834,
+    "label": 1
+  },
+  {
+    "id": "post_59",
+    "title": "Python performance optimization tips",
+    "body": "The key was to:\n\nWhen working with Python, you need to consider Redis. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.804,
+    "utility_score": 0.971,
+    "label": 1
+  },
+  {
+    "id": "post_349",
+    "title": "Best practices for REST API with Redis",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.445,
+    "utility_score": 0.306,
+    "label": 0
+  },
+  {
+    "id": "post_9",
+    "title": "AWS vs Machine Learning comparison",
+    "body": "Step by step solution:\n\nWhen working with AWS, you need to consider Machine Learning. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.793,
+    "utility_score": 0.835,
+    "label": 1
+  },
+  {
+    "id": "post_154",
+    "title": "Redis vs Django comparison",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.236,
+    "utility_score": 0.375,
+    "label": 0
+  },
+  {
+    "id": "post_260",
+    "title": "Step by step PostgreSQL tutorial",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.272,
+    "utility_score": 0.399,
+    "label": 0
+  },
+  {
+    "id": "post_90",
+    "title": "Best practices for Redis with Docker",
+    "body": "After debugging, I found:\n\nWhen working with Redis, you need to consider Docker. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.862,
+    "utility_score": 0.754,
+    "label": 1
+  },
+  {
+    "id": "post_338",
+    "title": "Best practices for PostgreSQL with Machine Learning",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.327,
+    "utility_score": 0.068,
+    "label": 0
+  },
+  {
+    "id": "post_272",
+    "title": "Debugging React issues in Kubernetes",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.476,
+    "utility_score": 0.168,
+    "label": 0
+  },
+  {
+    "id": "post_305",
+    "title": "Production-ready Kubernetes setup",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.301,
+    "utility_score": 0.171,
+    "label": 0
+  },
+  {
+    "id": "post_54",
+    "title": "Production-ready Docker setup",
+    "body": "Solved! Here's what worked:\n\nWhen working with Docker, you need to consider MongoDB. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.78,
+    "utility_score": 0.722,
+    "label": 1
+  },
+  {
+    "id": "post_164",
+    "title": "AWS error: how to fix?",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.468,
+    "utility_score": 0.359,
+    "label": 0
+  },
+  {
+    "id": "post_46",
+    "title": "Production-ready JavaScript setup",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.123,
+    "utility_score": 0.378,
+    "label": 0
+  },
+  {
+    "id": "post_16",
+    "title": "React error: how to fix?",
+    "body": "After debugging, I found:\n\nWhen working with React, you need to consider JavaScript. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.882,
+    "utility_score": 0.993,
+    "label": 1
+  },
+  {
+    "id": "post_228",
+    "title": "REST API error: how to fix?",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.232,
+    "utility_score": 0.069,
+    "label": 0
+  },
+  {
+    "id": "post_109",
+    "title": "Debugging PostgreSQL issues in REST API",
+    "body": "After debugging, I found:\n\nWhen working with PostgreSQL, you need to consider REST API. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.689,
+    "utility_score": 0.87,
+    "label": 1
+  },
+  {
+    "id": "post_217",
+    "title": "Step by step Python tutorial",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.333,
+    "utility_score": 0.017,
+    "label": 0
+  },
+  {
+    "id": "post_282",
+    "title": "Production-ready Django setup",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.335,
+    "utility_score": 0.211,
+    "label": 0
+  },
+  {
+    "id": "post_132",
+    "title": "Debugging Machine Learning issues in Redis",
+    "body": "Solved! Here's what worked:\n\nWhen working with Machine Learning, you need to consider Redis. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.638,
+    "utility_score": 0.89,
+    "label": 1
+  },
+  {
+    "id": "post_301",
+    "title": "Python vs REST API comparison",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.211,
+    "utility_score": 0.219,
+    "label": 0
+  },
+  {
+    "id": "post_477",
+    "title": "AWS vs React comparison",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.382,
+    "utility_score": 0.184,
+    "label": 0
+  },
+  {
+    "id": "post_281",
+    "title": "Debugging React issues in MongoDB",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.418,
+    "utility_score": 0.042,
+    "label": 0
+  },
+  {
+    "id": "post_240",
+    "title": "Production-ready REST API setup",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.208,
+    "utility_score": 0.275,
+    "label": 0
+  },
+  {
+    "id": "post_278",
+    "title": "Best practices for React with Redis",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.376,
+    "utility_score": 0.384,
+    "label": 0
+  },
+  {
+    "id": "post_241",
+    "title": "Machine Learning error: how to fix?",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.463,
+    "utility_score": 0.162,
+    "label": 0
+  },
+  {
+    "id": "post_342",
+    "title": "REST API performance optimization tips",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.481,
+    "utility_score": 0.114,
+    "label": 0
+  },
+  {
+    "id": "post_293",
+    "title": "Step by step Django tutorial",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.105,
+    "utility_score": 0.023,
+    "label": 0
+  },
+  {
+    "id": "post_245",
+    "title": "Debugging JavaScript issues in Docker",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.315,
+    "utility_score": 0.373,
+    "label": 0
+  },
+  {
+    "id": "post_119",
+    "title": "Production-ready PostgreSQL setup",
+    "body": "Solved! Here's what worked:\n\nWhen working with PostgreSQL, you need to consider Machine Learning. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.909,
+    "utility_score": 0.752,
+    "label": 1
+  },
+  {
+    "id": "post_413",
+    "title": "Production-ready JavaScript setup",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.255,
+    "utility_score": 0.169,
+    "label": 0
+  },
+  {
+    "id": "post_42",
+    "title": "Production-ready Python setup",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.314,
+    "utility_score": 0.084,
+    "label": 0
+  },
+  {
+    "id": "post_128",
+    "title": "Step by step PostgreSQL tutorial",
+    "body": "After debugging, I found:\n\nWhen working with PostgreSQL, you need to consider JavaScript. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.609,
+    "utility_score": 0.757,
+    "label": 1
+  },
+  {
+    "id": "post_328",
+    "title": "Redis error: how to fix?",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.492,
+    "utility_score": 0.198,
+    "label": 0
+  },
+  {
+    "id": "post_267",
+    "title": "React error: how to fix?",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.146,
+    "utility_score": 0.26,
+    "label": 0
+  },
+  {
+    "id": "post_439",
+    "title": "Kubernetes performance optimization tips",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.376,
+    "utility_score": 0.106,
+    "label": 0
+  },
+  {
+    "id": "post_153",
+    "title": "Best practices for Redis with Python",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.287,
+    "utility_score": 0.266,
+    "label": 0
+  },
+  {
+    "id": "post_113",
+    "title": "REST API vs React comparison",
+    "body": "This fixed the issue for me:\n\nWhen working with REST API, you need to consider React. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.646,
+    "utility_score": 0.854,
+    "label": 1
+  },
+  {
+    "id": "post_425",
+    "title": "Production-ready JavaScript setup",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.306,
+    "utility_score": 0.311,
+    "label": 0
+  },
+  {
+    "id": "post_437",
+    "title": "Kubernetes vs JavaScript comparison",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.196,
+    "utility_score": 0.386,
+    "label": 0
+  },
+  {
+    "id": "post_172",
+    "title": "How do I Python in Docker?",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.331,
+    "utility_score": 0.389,
+    "label": 0
+  },
+  {
+    "id": "post_454",
+    "title": "React error: how to fix?",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.205,
+    "utility_score": 0.181,
+    "label": 0
+  },
+  {
+    "id": "post_473",
+    "title": "Production-ready Redis setup",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.314,
+    "utility_score": 0.15,
+    "label": 0
+  },
+  {
+    "id": "post_234",
+    "title": "Step by step Redis tutorial",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.479,
+    "utility_score": 0.223,
+    "label": 0
+  },
+  {
+    "id": "post_442",
+    "title": "Redis error: how to fix?",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.196,
+    "utility_score": 0.181,
+    "label": 0
+  },
+  {
+    "id": "post_86",
+    "title": "AWS performance optimization tips",
+    "body": "Step by step solution:\n\nWhen working with AWS, you need to consider Docker. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.773,
+    "utility_score": 0.731,
+    "label": 1
+  },
+  {
+    "id": "post_397",
+    "title": "Django error: how to fix?",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.109,
+    "utility_score": 0.161,
+    "label": 0
+  },
+  {
+    "id": "post_308",
+    "title": "Best practices for Python with PostgreSQL",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.227,
+    "utility_score": 0.087,
+    "label": 0
+  },
+  {
+    "id": "post_387",
+    "title": "Best practices for PostgreSQL with JavaScript",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.23,
+    "utility_score": 0.121,
+    "label": 0
+  },
+  {
+    "id": "post_319",
+    "title": "Production-ready AWS setup",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.164,
+    "utility_score": 0.253,
+    "label": 0
+  },
+  {
+    "id": "post_138",
+    "title": "Debugging PostgreSQL issues in Django",
+    "body": "Solved! Here's what worked:\n\nWhen working with PostgreSQL, you need to consider Django. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.652,
+    "utility_score": 0.79,
+    "label": 1
+  },
+  {
+    "id": "post_251",
+    "title": "Debugging PostgreSQL issues in Machine Learning",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.404,
+    "utility_score": 0.334,
+    "label": 0
+  },
+  {
+    "id": "post_405",
+    "title": "How do I Python in React?",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.194,
+    "utility_score": 0.041,
+    "label": 0
+  },
+  {
+    "id": "post_330",
+    "title": "AWS vs Kubernetes comparison",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.248,
+    "utility_score": 0.075,
+    "label": 0
+  },
+  {
+    "id": "post_6",
+    "title": "Debugging AWS issues in Python",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.451,
+    "utility_score": 0.382,
+    "label": 0
+  },
+  {
+    "id": "post_365",
+    "title": "REST API performance optimization tips",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.216,
+    "utility_score": 0.047,
+    "label": 0
+  },
+  {
+    "id": "post_4",
+    "title": "Debugging MongoDB issues in AWS",
+    "body": "After debugging, I found:\n\nWhen working with MongoDB, you need to consider AWS. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.644,
+    "utility_score": 0.714,
+    "label": 1
+  },
+  {
+    "id": "post_189",
+    "title": "Production-ready JavaScript setup",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.102,
+    "utility_score": 0.326,
+    "label": 0
+  },
+  {
+    "id": "post_133",
+    "title": "Step by step Redis tutorial",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.128,
+    "utility_score": 0.322,
+    "label": 0
+  },
+  {
+    "id": "post_482",
+    "title": "How do I React in JavaScript?",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.213,
+    "utility_score": 0.285,
+    "label": 0
+  },
+  {
+    "id": "post_218",
+    "title": "JavaScript performance optimization tips",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.255,
+    "utility_score": 0.295,
+    "label": 0
+  },
+  {
+    "id": "post_306",
+    "title": "Best practices for Docker with React",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.369,
+    "utility_score": 0.243,
+    "label": 0
+  },
+  {
+    "id": "post_358",
+    "title": "Best practices for Python with AWS",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.288,
+    "utility_score": 0.389,
+    "label": 0
+  },
+  {
+    "id": "post_491",
+    "title": "MongoDB vs PostgreSQL comparison",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.259,
+    "utility_score": 0.042,
+    "label": 0
+  },
+  {
+    "id": "post_359",
+    "title": "Kubernetes error: how to fix?",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.458,
+    "utility_score": 0.227,
+    "label": 0
+  },
+  {
+    "id": "post_434",
+    "title": "Debugging AWS issues in Kubernetes",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.272,
+    "utility_score": 0.037,
+    "label": 0
+  },
+  {
+    "id": "post_468",
+    "title": "Production-ready Django setup",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.166,
+    "utility_score": 0.366,
+    "label": 0
+  },
+  {
+    "id": "post_417",
+    "title": "Production-ready REST API setup",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.279,
+    "utility_score": 0.043,
+    "label": 0
+  },
+  {
+    "id": "post_126",
+    "title": "Debugging Python issues in AWS",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.399,
+    "utility_score": 0.389,
+    "label": 0
+  },
+  {
+    "id": "post_360",
+    "title": "React error: how to fix?",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.498,
+    "utility_score": 0.263,
+    "label": 0
+  },
+  {
+    "id": "post_53",
+    "title": "Debugging Kubernetes issues in Redis",
+    "body": "This fixed the issue for me:\n\nWhen working with Kubernetes, you need to consider Redis. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.909,
+    "utility_score": 0.731,
+    "label": 1
+  },
+  {
+    "id": "post_93",
+    "title": "How do I JavaScript in Django?",
+    "body": "The key was to:\n\nWhen working with JavaScript, you need to consider Django. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.943,
+    "utility_score": 0.761,
+    "label": 1
+  },
+  {
+    "id": "post_418",
+    "title": "Machine Learning error: how to fix?",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.435,
+    "utility_score": 0.145,
+    "label": 0
+  },
+  {
+    "id": "post_494",
+    "title": "Django performance optimization tips",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.487,
+    "utility_score": 0.325,
+    "label": 0
+  },
+  {
+    "id": "post_225",
+    "title": "MongoDB error: how to fix?",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.121,
+    "utility_score": 0.218,
+    "label": 0
+  },
+  {
+    "id": "post_408",
+    "title": "Production-ready Redis setup",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.145,
+    "utility_score": 0.154,
+    "label": 0
+  },
+  {
+    "id": "post_112",
+    "title": "Production-ready Django setup",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.485,
+    "utility_score": 0.31,
+    "label": 0
+  },
+  {
+    "id": "post_427",
+    "title": "Debugging MongoDB issues in PostgreSQL",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.229,
+    "utility_score": 0.222,
+    "label": 0
+  },
+  {
+    "id": "post_63",
+    "title": "PostgreSQL vs Docker comparison",
+    "body": "This fixed the issue for me:\n\nWhen working with PostgreSQL, you need to consider Docker. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.633,
+    "utility_score": 0.851,
+    "label": 1
+  },
+  {
+    "id": "post_187",
+    "title": "Step by step React tutorial",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.277,
+    "utility_score": 0.048,
+    "label": 0
+  },
+  {
+    "id": "post_56",
+    "title": "React performance optimization tips",
+    "body": "The key was to:\n\nWhen working with React, you need to consider Docker. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.76,
+    "utility_score": 0.877,
+    "label": 1
+  },
+  {
+    "id": "post_66",
+    "title": "Production-ready MongoDB setup",
+    "body": "This fixed the issue for me:\n\nWhen working with MongoDB, you need to consider Kubernetes. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.886,
+    "utility_score": 0.92,
+    "label": 1
+  },
+  {
+    "id": "post_286",
+    "title": "Best practices for Kubernetes with MongoDB",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.13,
+    "utility_score": 0.302,
+    "label": 0
+  },
+  {
+    "id": "post_57",
+    "title": "Best practices for JavaScript with Django",
+    "body": "This fixed the issue for me:\n\nWhen working with JavaScript, you need to consider Django. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.807,
+    "utility_score": 0.73,
+    "label": 1
+  },
+  {
+    "id": "post_438",
+    "title": "Debugging React issues in Django",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.277,
+    "utility_score": 0.309,
+    "label": 0
+  },
+  {
+    "id": "post_99",
+    "title": "Best practices for Docker with REST API",
+    "body": "After debugging, I found:\n\nWhen working with Docker, you need to consider REST API. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.833,
+    "utility_score": 0.955,
+    "label": 1
+  },
+  {
+    "id": "post_295",
+    "title": "Production-ready React setup",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.284,
+    "utility_score": 0.154,
+    "label": 0
+  },
+  {
+    "id": "post_232",
+    "title": "Debugging AWS issues in MongoDB",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.303,
+    "utility_score": 0.064,
+    "label": 0
+  },
+  {
+    "id": "post_70",
+    "title": "Best practices for REST API with Kubernetes",
+    "body": "Step by step solution:\n\nWhen working with REST API, you need to consider Kubernetes. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.928,
+    "utility_score": 0.767,
+    "label": 1
+  },
+  {
+    "id": "post_287",
+    "title": "Debugging Python issues in Redis",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.236,
+    "utility_score": 0.054,
+    "label": 0
+  },
+  {
+    "id": "post_106",
+    "title": "Django performance optimization tips",
+    "body": "Solved! Here's what worked:\n\nWhen working with Django, you need to consider Kubernetes. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.692,
+    "utility_score": 0.78,
+    "label": 1
+  },
+  {
+    "id": "post_273",
+    "title": "AWS error: how to fix?",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.487,
+    "utility_score": 0.06,
+    "label": 0
+  },
+  {
+    "id": "post_207",
+    "title": "Redis performance optimization tips",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.191,
+    "utility_score": 0.306,
+    "label": 0
+  },
+  {
+    "id": "post_220",
+    "title": "Debugging PostgreSQL issues in Django",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.49,
+    "utility_score": 0.125,
+    "label": 0
+  },
+  {
+    "id": "post_457",
+    "title": "Step by step Docker tutorial",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.424,
+    "utility_score": 0.248,
+    "label": 0
+  },
+  {
+    "id": "post_447",
+    "title": "Best practices for PostgreSQL with REST API",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.412,
+    "utility_score": 0.007,
+    "label": 0
+  },
+  {
+    "id": "post_108",
+    "title": "Best practices for JavaScript with Python",
+    "body": "Step by step solution:\n\nWhen working with JavaScript, you need to consider Python. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.917,
+    "utility_score": 0.878,
+    "label": 1
+  },
+  {
+    "id": "post_370",
+    "title": "Production-ready Redis setup",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.186,
+    "utility_score": 0.065,
+    "label": 0
+  },
+  {
+    "id": "post_297",
+    "title": "Kubernetes vs JavaScript comparison",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.471,
+    "utility_score": 0.024,
+    "label": 0
+  },
+  {
+    "id": "post_459",
+    "title": "Production-ready PostgreSQL setup",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.295,
+    "utility_score": 0.16,
+    "label": 0
+  },
+  {
+    "id": "post_379",
+    "title": "How do I Python in PostgreSQL?",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.263,
+    "utility_score": 0.218,
+    "label": 0
+  },
+  {
+    "id": "post_401",
+    "title": "Kubernetes vs AWS comparison",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.324,
+    "utility_score": 0.134,
+    "label": 0
+  },
+  {
+    "id": "post_215",
+    "title": "Step by step React tutorial",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.281,
+    "utility_score": 0.219,
+    "label": 0
+  },
+  {
+    "id": "post_311",
+    "title": "How do I AWS in MongoDB?",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.258,
+    "utility_score": 0.351,
+    "label": 0
+  },
+  {
+    "id": "post_65",
+    "title": "AWS vs Redis comparison",
+    "body": "The key was to:\n\nWhen working with AWS, you need to consider Redis. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.656,
+    "utility_score": 0.846,
+    "label": 1
+  },
+  {
+    "id": "post_428",
+    "title": "Step by step Machine Learning tutorial",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.428,
+    "utility_score": 0.14,
+    "label": 0
+  },
+  {
+    "id": "post_371",
+    "title": "Kubernetes performance optimization tips",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.454,
+    "utility_score": 0.016,
+    "label": 0
+  },
+  {
+    "id": "post_345",
+    "title": "React error: how to fix?",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.133,
+    "utility_score": 0.029,
+    "label": 0
+  },
+  {
+    "id": "post_139",
+    "title": "How do I React in Python?",
+    "body": "The key was to:\n\nWhen working with React, you need to consider Python. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.704,
+    "utility_score": 0.996,
+    "label": 1
+  },
+  {
+    "id": "post_19",
+    "title": "Debugging React issues in MongoDB",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.192,
+    "utility_score": 0.158,
+    "label": 0
+  },
+  {
+    "id": "post_290",
+    "title": "Production-ready Kubernetes setup",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.256,
+    "utility_score": 0.38,
+    "label": 0
+  },
+  {
+    "id": "post_310",
+    "title": "Django performance optimization tips",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.416,
+    "utility_score": 0.257,
+    "label": 0
+  },
+  {
+    "id": "post_317",
+    "title": "Best practices for Docker with Django",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.133,
+    "utility_score": 0.311,
+    "label": 0
+  },
+  {
+    "id": "post_324",
+    "title": "Docker performance optimization tips",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.348,
+    "utility_score": 0.298,
+    "label": 0
+  },
+  {
+    "id": "post_196",
+    "title": "PostgreSQL vs Kubernetes comparison",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.444,
+    "utility_score": 0.081,
+    "label": 0
+  },
+  {
+    "id": "post_161",
+    "title": "Step by step Django tutorial",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.16,
+    "utility_score": 0.345,
+    "label": 0
+  },
+  {
+    "id": "post_7",
+    "title": "Step by step Redis tutorial",
+    "body": "This fixed the issue for me:\n\nWhen working with Redis, you need to consider MongoDB. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.725,
+    "utility_score": 0.916,
+    "label": 1
+  },
+  {
+    "id": "post_250",
+    "title": "Docker performance optimization tips",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.428,
+    "utility_score": 0.218,
+    "label": 0
+  },
+  {
+    "id": "post_340",
+    "title": "Django performance optimization tips",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.28,
+    "utility_score": 0.139,
+    "label": 0
+  },
+  {
+    "id": "post_201",
+    "title": "REST API vs AWS comparison",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.125,
+    "utility_score": 0.334,
+    "label": 0
+  },
+  {
+    "id": "post_61",
+    "title": "Production-ready MongoDB setup",
+    "body": "Step by step solution:\n\nWhen working with MongoDB, you need to consider JavaScript. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.815,
+    "utility_score": 0.736,
+    "label": 1
+  },
+  {
+    "id": "post_476",
+    "title": "Production-ready Kubernetes setup",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.151,
+    "utility_score": 0.299,
+    "label": 0
+  },
+  {
+    "id": "post_373",
+    "title": "Debugging JavaScript issues in PostgreSQL",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.295,
+    "utility_score": 0.251,
+    "label": 0
+  },
+  {
+    "id": "post_107",
+    "title": "Production-ready Django setup",
+    "body": "This fixed the issue for me:\n\nWhen working with Django, you need to consider MongoDB. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.649,
+    "utility_score": 0.753,
+    "label": 1
+  },
+  {
+    "id": "post_103",
+    "title": "Step by step AWS tutorial",
+    "body": "After debugging, I found:\n\nWhen working with AWS, you need to consider PostgreSQL. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.846,
+    "utility_score": 0.824,
+    "label": 1
+  },
+  {
+    "id": "post_131",
+    "title": "Production-ready Django setup",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.112,
+    "utility_score": 0.154,
+    "label": 0
+  },
+  {
+    "id": "post_191",
+    "title": "Step by step Machine Learning tutorial",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.108,
+    "utility_score": 0.3,
+    "label": 0
+  },
+  {
+    "id": "post_51",
+    "title": "Production-ready Django setup",
+    "body": "The key was to:\n\nWhen working with Django, you need to consider PostgreSQL. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.741,
+    "utility_score": 0.859,
+    "label": 1
+  },
+  {
+    "id": "post_471",
+    "title": "Python error: how to fix?",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.184,
+    "utility_score": 0.381,
+    "label": 0
+  },
+  {
+    "id": "post_31",
+    "title": "How do I PostgreSQL in Python?",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.281,
+    "utility_score": 0.052,
+    "label": 0
+  },
+  {
+    "id": "post_221",
+    "title": "Step by step MongoDB tutorial",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.152,
+    "utility_score": 0.31,
+    "label": 0
+  },
+  {
+    "id": "post_472",
+    "title": "Docker error: how to fix?",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.36,
+    "utility_score": 0.15,
+    "label": 0
+  },
+  {
+    "id": "post_364",
+    "title": "How do I REST API in Kubernetes?",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.15,
+    "utility_score": 0.251,
+    "label": 0
+  },
+  {
+    "id": "post_247",
+    "title": "Best practices for AWS with Docker",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.125,
+    "utility_score": 0.224,
+    "label": 0
+  },
+  {
+    "id": "post_163",
+    "title": "Step by step Kubernetes tutorial",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.422,
+    "utility_score": 0.325,
+    "label": 0
+  },
+  {
+    "id": "post_105",
+    "title": "MongoDB vs Python comparison",
+    "body": "This fixed the issue for me:\n\nWhen working with MongoDB, you need to consider Python. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.87,
+    "utility_score": 0.701,
+    "label": 1
+  },
+  {
+    "id": "post_69",
+    "title": "Docker performance optimization tips",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.421,
+    "utility_score": 0.357,
+    "label": 0
+  },
+  {
+    "id": "post_98",
+    "title": "PostgreSQL error: how to fix?",
+    "body": "Solved! Here's what worked:\n\nWhen working with PostgreSQL, you need to consider React. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.846,
+    "utility_score": 0.702,
+    "label": 1
+  },
+  {
+    "id": "post_449",
+    "title": "Debugging AWS issues in Django",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.119,
+    "utility_score": 0.297,
+    "label": 0
+  },
+  {
+    "id": "post_303",
+    "title": "MongoDB error: how to fix?",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.301,
+    "utility_score": 0.167,
+    "label": 0
+  },
+  {
+    "id": "post_288",
+    "title": "Debugging MongoDB issues in PostgreSQL",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.435,
+    "utility_score": 0.225,
+    "label": 0
+  },
+  {
+    "id": "post_121",
+    "title": "Best practices for React with Machine Learning",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.42,
+    "utility_score": 0.113,
+    "label": 0
+  },
+  {
+    "id": "post_400",
+    "title": "PostgreSQL performance optimization tips",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.468,
+    "utility_score": 0.197,
+    "label": 0
+  },
+  {
+    "id": "post_238",
+    "title": "MongoDB performance optimization tips",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.491,
+    "utility_score": 0.327,
+    "label": 0
+  },
+  {
+    "id": "post_15",
+    "title": "Step by step MongoDB tutorial",
+    "body": "Step by step solution:\n\nWhen working with MongoDB, you need to consider AWS. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.869,
+    "utility_score": 0.928,
+    "label": 1
+  },
+  {
+    "id": "post_64",
+    "title": "Docker performance optimization tips",
+    "body": "This fixed the issue for me:\n\nWhen working with Docker, you need to consider REST API. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.694,
+    "utility_score": 0.891,
+    "label": 1
+  },
+  {
+    "id": "post_246",
+    "title": "REST API performance optimization tips",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.245,
+    "utility_score": 0.139,
+    "label": 0
+  },
+  {
+    "id": "post_411",
+    "title": "Step by step Machine Learning tutorial",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.124,
+    "utility_score": 0.339,
+    "label": 0
+  },
+  {
+    "id": "post_398",
+    "title": "Debugging JavaScript issues in MongoDB",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.231,
+    "utility_score": 0.065,
+    "label": 0
+  },
+  {
+    "id": "post_352",
+    "title": "React error: how to fix?",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.12,
+    "utility_score": 0.071,
+    "label": 0
+  },
+  {
+    "id": "post_159",
+    "title": "MongoDB vs REST API comparison",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.291,
+    "utility_score": 0.175,
+    "label": 0
+  },
+  {
+    "id": "post_279",
+    "title": "React vs Python comparison",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.467,
+    "utility_score": 0.285,
+    "label": 0
+  },
+  {
+    "id": "post_177",
+    "title": "Debugging AWS issues in PostgreSQL",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.199,
+    "utility_score": 0.369,
+    "label": 0
+  },
+  {
+    "id": "post_205",
+    "title": "Production-ready Machine Learning setup",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.135,
+    "utility_score": 0.269,
+    "label": 0
+  },
+  {
+    "id": "post_296",
+    "title": "How do I Redis in Machine Learning?",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.329,
+    "utility_score": 0.116,
+    "label": 0
+  },
+  {
+    "id": "post_355",
+    "title": "Production-ready Django setup",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.187,
+    "utility_score": 0.219,
+    "label": 0
+  },
+  {
+    "id": "post_369",
+    "title": "Redis error: how to fix?",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.463,
+    "utility_score": 0.301,
+    "label": 0
+  },
+  {
+    "id": "post_259",
+    "title": "Production-ready REST API setup",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.305,
+    "utility_score": 0.354,
+    "label": 0
+  },
+  {
+    "id": "post_36",
+    "title": "Production-ready Machine Learning setup",
+    "body": "The key was to:\n\nWhen working with Machine Learning, you need to consider React. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.796,
+    "utility_score": 0.808,
+    "label": 1
+  },
+  {
+    "id": "post_412",
+    "title": "Step by step JavaScript tutorial",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.315,
+    "utility_score": 0.357,
+    "label": 0
+  },
+  {
+    "id": "post_490",
+    "title": "Best practices for React with Machine Learning",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.231,
+    "utility_score": 0.308,
+    "label": 0
+  },
+  {
+    "id": "post_432",
+    "title": "Best practices for Python with MongoDB",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.372,
+    "utility_score": 0.205,
+    "label": 0
+  },
+  {
+    "id": "post_195",
+    "title": "Production-ready Redis setup",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.257,
+    "utility_score": 0.218,
+    "label": 0
+  },
+  {
+    "id": "post_92",
+    "title": "REST API error: how to fix?",
+    "body": "After debugging, I found:\n\nWhen working with REST API, you need to consider AWS. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.667,
+    "utility_score": 0.744,
+    "label": 1
+  },
+  {
+    "id": "post_28",
+    "title": "React performance optimization tips",
+    "body": "The key was to:\n\nWhen working with React, you need to consider Python. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.677,
+    "utility_score": 0.913,
+    "label": 1
+  },
+  {
+    "id": "post_48",
+    "title": "How do I React in JavaScript?",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.493,
+    "utility_score": 0.002,
+    "label": 0
+  },
+  {
+    "id": "post_143",
+    "title": "How do I Machine Learning in JavaScript?",
+    "body": "Step by step solution:\n\nWhen working with Machine Learning, you need to consider JavaScript. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.828,
+    "utility_score": 0.947,
+    "label": 1
+  },
+  {
+    "id": "post_104",
+    "title": "Production-ready Django setup",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.422,
+    "utility_score": 0.242,
+    "label": 0
+  },
+  {
+    "id": "post_173",
+    "title": "Best practices for Machine Learning with MongoDB",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.105,
+    "utility_score": 0.03,
+    "label": 0
+  },
+  {
+    "id": "post_25",
+    "title": "Production-ready React setup",
+    "body": "After debugging, I found:\n\nWhen working with React, you need to consider Django. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.646,
+    "utility_score": 0.829,
+    "label": 1
+  },
+  {
+    "id": "post_318",
+    "title": "How do I Python in AWS?",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.135,
+    "utility_score": 0.3,
+    "label": 0
+  },
+  {
+    "id": "post_212",
+    "title": "AWS performance optimization tips",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.261,
+    "utility_score": 0.1,
+    "label": 0
+  },
+  {
+    "id": "post_402",
+    "title": "Production-ready PostgreSQL setup",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.416,
+    "utility_score": 0.36,
+    "label": 0
+  },
+  {
+    "id": "post_366",
+    "title": "Kubernetes vs MongoDB comparison",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.271,
+    "utility_score": 0.252,
+    "label": 0
+  },
+  {
+    "id": "post_474",
+    "title": "How do I React in PostgreSQL?",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.103,
+    "utility_score": 0.129,
+    "label": 0
+  },
+  {
+    "id": "post_167",
+    "title": "Best practices for AWS with JavaScript",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.273,
+    "utility_score": 0.047,
+    "label": 0
+  },
+  {
+    "id": "post_302",
+    "title": "Debugging MongoDB issues in Python",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.24,
+    "utility_score": 0.234,
+    "label": 0
+  },
+  {
+    "id": "post_265",
+    "title": "Kubernetes performance optimization tips",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.113,
+    "utility_score": 0.205,
+    "label": 0
+  },
+  {
+    "id": "post_122",
+    "title": "How do I React in REST API?",
+    "body": "The key was to:\n\nWhen working with React, you need to consider REST API. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.95,
+    "utility_score": 0.855,
+    "label": 1
+  },
+  {
+    "id": "post_486",
+    "title": "Python performance optimization tips",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.443,
+    "utility_score": 0.058,
+    "label": 0
+  },
+  {
+    "id": "post_380",
+    "title": "How do I Machine Learning in AWS?",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.33,
+    "utility_score": 0.12,
+    "label": 0
+  },
+  {
+    "id": "post_492",
+    "title": "Production-ready Django setup",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.259,
+    "utility_score": 0.126,
+    "label": 0
+  },
+  {
+    "id": "post_254",
+    "title": "JavaScript performance optimization tips",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.486,
+    "utility_score": 0.264,
+    "label": 0
+  },
+  {
+    "id": "post_1",
+    "title": "JavaScript performance optimization tips",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.436,
+    "utility_score": 0.102,
+    "label": 0
+  },
+  {
+    "id": "post_184",
+    "title": "Debugging Django issues in Python",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.264,
+    "utility_score": 0.087,
+    "label": 0
+  },
+  {
+    "id": "post_470",
+    "title": "How do I React in REST API?",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.107,
+    "utility_score": 0.36,
+    "label": 0
+  },
+  {
+    "id": "post_414",
+    "title": "Debugging Kubernetes issues in Django",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.136,
+    "utility_score": 0.012,
+    "label": 0
+  },
+  {
+    "id": "post_72",
+    "title": "Kubernetes performance optimization tips",
+    "body": "This fixed the issue for me:\n\nWhen working with Kubernetes, you need to consider Redis. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.706,
+    "utility_score": 0.979,
+    "label": 1
+  },
+  {
+    "id": "post_495",
+    "title": "Debugging AWS issues in Kubernetes",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.453,
+    "utility_score": 0.358,
+    "label": 0
+  },
+  {
+    "id": "post_484",
+    "title": "JavaScript vs Docker comparison",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.293,
+    "utility_score": 0.114,
+    "label": 0
+  },
+  {
+    "id": "post_123",
+    "title": "Debugging Docker issues in Django",
+    "body": "This fixed the issue for me:\n\nWhen working with Docker, you need to consider Django. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.852,
+    "utility_score": 0.924,
+    "label": 1
+  },
+  {
+    "id": "post_68",
+    "title": "Production-ready Redis setup",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.295,
+    "utility_score": 0.393,
+    "label": 0
+  },
+  {
+    "id": "post_21",
+    "title": "Debugging Docker issues in REST API",
+    "body": "The key was to:\n\nWhen working with Docker, you need to consider REST API. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.807,
+    "utility_score": 0.781,
+    "label": 1
+  },
+  {
+    "id": "post_185",
+    "title": "Debugging Django issues in Python",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.133,
+    "utility_score": 0.159,
+    "label": 0
+  },
+  {
+    "id": "post_111",
+    "title": "React vs Python comparison",
+    "body": "The key was to:\n\nWhen working with React, you need to consider Python. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.82,
+    "utility_score": 0.705,
+    "label": 1
+  },
+  {
+    "id": "post_347",
+    "title": "How do I JavaScript in REST API?",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.288,
+    "utility_score": 0.28,
+    "label": 0
+  },
+  {
+    "id": "post_416",
+    "title": "Docker error: how to fix?",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.363,
+    "utility_score": 0.363,
+    "label": 0
+  },
+  {
+    "id": "post_315",
+    "title": "Redis error: how to fix?",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.477,
+    "utility_score": 0.158,
+    "label": 0
+  },
+  {
+    "id": "post_393",
+    "title": "Debugging PostgreSQL issues in Machine Learning",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.377,
+    "utility_score": 0.399,
+    "label": 0
+  },
+  {
+    "id": "post_152",
+    "title": "Step by step AWS tutorial",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.477,
+    "utility_score": 0.02,
+    "label": 0
+  },
+  {
+    "id": "post_37",
+    "title": "Step by step Docker tutorial",
+    "body": "Solved! Here's what worked:\n\nWhen working with Docker, you need to consider Kubernetes. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.742,
+    "utility_score": 0.926,
+    "label": 1
+  },
+  {
+    "id": "post_404",
+    "title": "PostgreSQL error: how to fix?",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.298,
+    "utility_score": 0.106,
+    "label": 0
+  },
+  {
+    "id": "post_78",
+    "title": "React vs Redis comparison",
+    "body": "The key was to:\n\nWhen working with React, you need to consider Redis. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.816,
+    "utility_score": 0.935,
+    "label": 1
+  },
+  {
+    "id": "post_455",
+    "title": "Redis performance optimization tips",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.122,
+    "utility_score": 0.28,
+    "label": 0
+  },
+  {
+    "id": "post_266",
+    "title": "Best practices for JavaScript with AWS",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.423,
+    "utility_score": 0.334,
+    "label": 0
+  },
+  {
+    "id": "post_18",
+    "title": "Step by step AWS tutorial",
+    "body": "After debugging, I found:\n\nWhen working with AWS, you need to consider React. \n\ndocker run -d -p 8080:80 nginx\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.661,
+    "utility_score": 0.784,
+    "label": 1
+  },
+  {
+    "id": "post_300",
+    "title": "Best practices for Redis with Docker",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.31,
+    "utility_score": 0.042,
+    "label": 0
+  },
+  {
+    "id": "post_377",
+    "title": "Debugging MongoDB issues in React",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.259,
+    "utility_score": 0.063,
+    "label": 0
+  },
+  {
+    "id": "post_249",
+    "title": "How do I Python in PostgreSQL?",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.411,
+    "utility_score": 0.34,
+    "label": 0
+  },
+  {
+    "id": "post_499",
+    "title": "Django error: how to fix?",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.461,
+    "utility_score": 0.037,
+    "label": 0
+  },
+  {
+    "id": "post_142",
+    "title": "Best practices for AWS with PostgreSQL",
+    "body": "I'm having issues with AWS. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.124,
+    "utility_score": 0.098,
+    "label": 0
+  },
+  {
+    "id": "post_50",
+    "title": "REST API vs Python comparison",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.44,
+    "utility_score": 0.103,
+    "label": 0
+  },
+  {
+    "id": "post_181",
+    "title": "How do I Redis in Kubernetes?",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.412,
+    "utility_score": 0.254,
+    "label": 0
+  },
+  {
+    "id": "post_394",
+    "title": "PostgreSQL performance optimization tips",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.4,
+    "utility_score": 0.305,
+    "label": 0
+  },
+  {
+    "id": "post_134",
+    "title": "Machine Learning error: how to fix?",
+    "body": "After debugging, I found:\n\nWhen working with Machine Learning, you need to consider MongoDB. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.739,
+    "utility_score": 0.935,
+    "label": 1
+  },
+  {
+    "id": "post_270",
+    "title": "Production-ready Docker setup",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.231,
+    "utility_score": 0.273,
+    "label": 0
+  },
+  {
+    "id": "post_216",
+    "title": "How do I Redis in JavaScript?",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.11,
+    "utility_score": 0.162,
+    "label": 0
+  },
+  {
+    "id": "post_26",
+    "title": "How do I JavaScript in REST API?",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.225,
+    "utility_score": 0.107,
+    "label": 0
+  },
+  {
+    "id": "post_165",
+    "title": "Step by step Django tutorial",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.426,
+    "utility_score": 0.378,
+    "label": 0
+  },
+  {
+    "id": "post_74",
+    "title": "How do I PostgreSQL in Redis?",
+    "body": "Step by step solution:\n\nWhen working with PostgreSQL, you need to consider Redis. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.784,
+    "utility_score": 0.826,
+    "label": 1
+  },
+  {
+    "id": "post_202",
+    "title": "Debugging Docker issues in React",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.103,
+    "utility_score": 0.092,
+    "label": 0
+  },
+  {
+    "id": "post_110",
+    "title": "AWS vs Docker comparison",
+    "body": "This fixed the issue for me:\n\nWhen working with AWS, you need to consider Docker. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.61,
+    "utility_score": 0.709,
+    "label": 1
+  },
+  {
+    "id": "post_20",
+    "title": "Best practices for PostgreSQL with REST API",
+    "body": "I'm having issues with PostgreSQL. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.339,
+    "utility_score": 0.193,
+    "label": 0
+  },
+  {
+    "id": "post_171",
+    "title": "Step by step JavaScript tutorial",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.495,
+    "utility_score": 0.358,
+    "label": 0
+  },
+  {
+    "id": "post_294",
+    "title": "REST API error: how to fix?",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.405,
+    "utility_score": 0.04,
+    "label": 0
+  },
+  {
+    "id": "post_197",
+    "title": "Step by step Python tutorial",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.46,
+    "utility_score": 0.135,
+    "label": 0
+  },
+  {
+    "id": "post_367",
+    "title": "How do I Redis in JavaScript?",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.497,
+    "utility_score": 0.201,
+    "label": 0
+  },
+  {
+    "id": "post_188",
+    "title": "REST API vs JavaScript comparison",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.292,
+    "utility_score": 0.313,
+    "label": 0
+  },
+  {
+    "id": "post_158",
+    "title": "Best practices for Python with Redis",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.455,
+    "utility_score": 0.381,
+    "label": 0
+  },
+  {
+    "id": "post_2",
+    "title": "Debugging AWS issues in Django",
+    "body": "This fixed the issue for me:\n\nWhen working with AWS, you need to consider Django. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.924,
+    "utility_score": 0.807,
+    "label": 1
+  },
+  {
+    "id": "post_71",
+    "title": "Production-ready React setup",
+    "body": "The key was to:\n\nWhen working with React, you need to consider Redis. \n\n```javascript\nconst api = async () => { return data; }\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.785,
+    "utility_score": 0.828,
+    "label": 1
+  },
+  {
+    "id": "post_12",
+    "title": "Debugging React issues in Kubernetes",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.271,
+    "utility_score": 0.363,
+    "label": 0
+  },
+  {
+    "id": "post_483",
+    "title": "Debugging Python issues in JavaScript",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.136,
+    "utility_score": 0.125,
+    "label": 0
+  },
+  {
+    "id": "post_211",
+    "title": "Step by step Docker tutorial",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.143,
+    "utility_score": 0.103,
+    "label": 0
+  },
+  {
+    "id": "post_219",
+    "title": "Debugging Python issues in Kubernetes",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.195,
+    "utility_score": 0.307,
+    "label": 0
+  },
+  {
+    "id": "post_462",
+    "title": "Python vs Machine Learning comparison",
+    "body": "I'm having issues with Python. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.373,
+    "utility_score": 0.099,
+    "label": 0
+  },
+  {
+    "id": "post_419",
+    "title": "Best practices for Kubernetes with MongoDB",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.287,
+    "utility_score": 0.339,
+    "label": 0
+  },
+  {
+    "id": "post_22",
+    "title": "PostgreSQL vs Docker comparison",
+    "body": "This fixed the issue for me:\n\nWhen working with PostgreSQL, you need to consider Docker. \n\n```python\ndef example():\n    return True\n```\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.614,
+    "utility_score": 0.838,
+    "label": 1
+  },
+  {
+    "id": "post_446",
+    "title": "Production-ready JavaScript setup",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.115,
+    "utility_score": 0.396,
+    "label": 0
+  },
+  {
+    "id": "post_176",
+    "title": "Docker error: how to fix?",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.282,
+    "utility_score": 0.31,
+    "label": 0
+  },
+  {
+    "id": "post_275",
+    "title": "Machine Learning error: how to fix?",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.318,
+    "utility_score": 0.331,
+    "label": 0
+  },
+  {
+    "id": "post_243",
+    "title": "Best practices for Redis with PostgreSQL",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.469,
+    "utility_score": 0.224,
+    "label": 0
+  },
+  {
+    "id": "post_166",
+    "title": "Redis error: how to fix?",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.34,
+    "utility_score": 0.301,
+    "label": 0
+  },
+  {
+    "id": "post_206",
+    "title": "Debugging Redis issues in Kubernetes",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.289,
+    "utility_score": 0.118,
+    "label": 0
+  },
+  {
+    "id": "post_203",
+    "title": "How do I React in REST API?",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.182,
+    "utility_score": 0.138,
+    "label": 0
+  },
+  {
+    "id": "post_320",
+    "title": "MongoDB vs Machine Learning comparison",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.292,
+    "utility_score": 0.005,
+    "label": 0
+  },
+  {
+    "id": "post_368",
+    "title": "Machine Learning error: how to fix?",
+    "body": "I'm having issues with Machine Learning. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.129,
+    "utility_score": 0.173,
+    "label": 0
+  },
+  {
+    "id": "post_115",
+    "title": "Debugging Django issues in Machine Learning",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.181,
+    "utility_score": 0.189,
+    "label": 0
+  },
+  {
+    "id": "post_326",
+    "title": "Docker vs PostgreSQL comparison",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.252,
+    "utility_score": 0.031,
+    "label": 0
+  },
+  {
+    "id": "post_147",
+    "title": "Best practices for Docker with JavaScript",
+    "body": "After debugging, I found:\n\nWhen working with Docker, you need to consider JavaScript. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.909,
+    "utility_score": 0.82,
+    "label": 1
+  },
+  {
+    "id": "post_289",
+    "title": "Production-ready Kubernetes setup",
+    "body": "I'm having issues with Kubernetes. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.36,
+    "utility_score": 0.262,
+    "label": 0
+  },
+  {
+    "id": "post_224",
+    "title": "How do I Redis in PostgreSQL?",
+    "body": "I'm having issues with Redis. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.415,
+    "utility_score": 0.343,
+    "label": 0
+  },
+  {
+    "id": "post_24",
+    "title": "How do I Django in REST API?",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.149,
+    "utility_score": 0.038,
+    "label": 0
+  },
+  {
+    "id": "post_96",
+    "title": "Debugging MongoDB issues in Redis",
+    "body": "This fixed the issue for me:\n\nWhen working with MongoDB, you need to consider Redis. \n\n<code>SELECT * FROM users WHERE active=true</code>\n\nThis approach handles edge cases and is production-tested.",
+    "expertise_score": 0.647,
+    "utility_score": 0.928,
+    "label": 1
+  },
+  {
+    "id": "post_433",
+    "title": "Production-ready Django setup",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.403,
+    "utility_score": 0.151,
+    "label": 0
+  },
+  {
+    "id": "post_144",
+    "title": "MongoDB error: how to fix?",
+    "body": "I'm having issues with MongoDB. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.266,
+    "utility_score": 0.093,
+    "label": 0
+  },
+  {
+    "id": "post_322",
+    "title": "How do I REST API in React?",
+    "body": "I'm having issues with REST API. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.24,
+    "utility_score": 0.131,
+    "label": 0
+  },
+  {
+    "id": "post_485",
+    "title": "JavaScript vs Docker comparison",
+    "body": "I'm having issues with JavaScript. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.174,
+    "utility_score": 0.047,
+    "label": 0
+  },
+  {
+    "id": "post_169",
+    "title": "Production-ready React setup",
+    "body": "I'm having issues with React. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.342,
+    "utility_score": 0.357,
+    "label": 0
+  },
+  {
+    "id": "post_361",
+    "title": "How do I Django in React?",
+    "body": "I'm having issues with Django. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.491,
+    "utility_score": 0.1,
+    "label": 0
+  },
+  {
+    "id": "post_333",
+    "title": "How do I Docker in MongoDB?",
+    "body": "I'm having issues with Docker. Has anyone tried this? Any help would be appreciated.",
+    "expertise_score": 0.449,
+    "utility_score": 0.203,
+    "label": 0
+  }
+]

@@ -4,7 +4,6 @@ import yaml
 import os
 import random
 import pandas as pd
-from google.cloud import bigquery
 from transformers import AutoTokenizer, get_linear_schedule_with_warmup
 from torch.utils.data import Dataset, DataLoader
 from models.arch.relevance_ranker import RedditRelevanceRanker
@@ -14,7 +13,12 @@ from sklearn.model_selection import train_test_split
 with open("config/settings.yaml", "r") as f:
     cfg = yaml.safe_load(f)
 
-device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+try:
+    device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+except:
+    device = torch.device("cpu")
+
+print(f"Using device: {device}")
 
 class RedditDataset(Dataset):
     def __init__(self, df, tokenizer, max_len):
@@ -47,44 +51,48 @@ class RedditDataset(Dataset):
         }
 
 def train():
-    client = bigquery.Client(project=cfg['database']['project_id'])
-    sql = f"SELECT body, expertise_score, utility_score, label FROM `{cfg['database']['source_table']}` LIMIT 5000"
-    df = client.query(sql).to_dataframe()
+    try:
+        from google.cloud import bigquery
+        client = bigquery.Client(project=cfg['database']['project_id'])
+        sql = f"SELECT body, expertise_score, utility_score, label FROM `{cfg['database']['source_table']}` LIMIT 5000"
+        df = client.query(sql).to_dataframe()
+        print(f"Loaded {len(df)} samples from BigQuery")
+    except Exception as e:
+        print(f"BigQuery not available, using local sample data")
+        
+        import json
+        sample_path = "data/sample_posts.json"
+        if os.path.exists(sample_path):
+            with open(sample_path, 'r') as f:
+                posts = json.load(f)
+            df = pd.DataFrame(posts)
+            print(f"Loaded {len(df)} samples from {sample_path}")
+        else:
+            print("ERROR: No data source available. Run: make create-samples")
+            exit(1)
     
-    # Data validation and cleaning
-    print(f"Loaded {len(df)} samples from BigQuery")
-    df = df.dropna(subset=['body', 'label'])  # Remove rows with null body or label
+    df = df.dropna(subset=['body', 'label'])
     
-    # Keep NaN for now to calculate proper min/max
-    print(f"\nOriginal feature ranges (before fillna):")
+    print(f"Original feature ranges (before fillna):")
     print(f"  Expertise: [{df['expertise_score'].min():.2f}, {df['expertise_score'].max():.2f}]")
     print(f"  Utility: [{df['utility_score'].min():.2f}, {df['utility_score'].max():.2f}]")
     
-    # Calculate min/max before filling NaN
     exp_min, exp_max = df['expertise_score'].min(), df['expertise_score'].max()
     util_min, util_max = df['utility_score'].min(), df['utility_score'].max()
     
-    # Handle case where all values might be NaN or equal
     if pd.isna(exp_min) or pd.isna(exp_max) or exp_min == exp_max:
-        print("WARNING: expertise_score has no variance, using default normalization [0, 1000]")
         exp_min, exp_max = 0.0, 1000.0
     if pd.isna(util_min) or pd.isna(util_max) or util_min == util_max:
-        print("WARNING: utility_score has no variance, using default normalization [0, 2]")
         util_min, util_max = 0.0, 2.0
     
-    # Fill NaN with median or 0 if no valid values
     df['expertise_score'] = df['expertise_score'].fillna(df['expertise_score'].median() if not pd.isna(df['expertise_score'].median()) else 0.0)
     df['utility_score'] = df['utility_score'].fillna(df['utility_score'].median() if not pd.isna(df['utility_score'].median()) else 0.0)
     
-    # Min-max normalization
     df['expertise_score'] = (df['expertise_score'] - exp_min) / (exp_max - exp_min + 1e-10)
     df['utility_score'] = (df['utility_score'] - util_min) / (util_max - util_min + 1e-10)
     
-    print(f"\nNormalized feature ranges:")
-    print(f"  Expertise: [{df['expertise_score'].min():.2f}, {df['expertise_score'].max():.2f}]")
-    print(f"  Utility: [{df['utility_score'].min():.2f}, {df['utility_score'].max():.2f}]")
+    print(f"Normalized ranges - Expertise: [{df['expertise_score'].min():.2f}, {df['expertise_score'].max():.2f}], Utility: [{df['utility_score'].min():.2f}, {df['utility_score'].max():.2f}]")
     
-    # Save normalization parameters for inference
     import json
     norm_params = {
         'expertise_min': float(exp_min),
@@ -95,9 +103,8 @@ def train():
     os.makedirs(cfg['artifacts']['model_path'], exist_ok=True)
     with open(os.path.join(cfg['artifacts']['model_path'], 'feature_norm_params.json'), 'w') as f:
         json.dump(norm_params, f, indent=2)
-    print(f"\nSaved normalization parameters to feature_norm_params.json")
     
-    print(f"After cleaning: {len(df)} samples")
+    print(f"Cleaned samples: {len(df)}")
     
     train_df, val_df = train_test_split(df, test_size=cfg['training']['val_split'])
     tokenizer = AutoTokenizer.from_pretrained(cfg['training']['model_name'])
@@ -125,11 +132,10 @@ def train():
             outputs = model(batch['input_ids'].to(device), batch['attention_mask'].to(device), batch['features'].to(device))
             loss = criterion(outputs, batch['label'].to(device))
             loss.backward()
-            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)  # Gradient clipping
+            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
             optimizer.step()
             total_train_loss += loss.item()
 
-        # Validation logic
         model.eval()
         total_val_loss = 0
         with torch.no_grad():
@@ -144,7 +150,7 @@ def train():
             best_val_loss = avg_val
             os.makedirs(cfg['artifacts']['model_path'], exist_ok=True)
             torch.save(model.state_dict(), save_path)
-            print(f"saved best model to {save_path}")
+            print(f"Saved model to {save_path}")
 
 if __name__ == "__main__":
     train()

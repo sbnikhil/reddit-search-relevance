@@ -10,3 +10,8 @@ transformers
 scikit-learn
 numpy
 pyyaml
+streamlit>=1.28.0
+sentence-transformers
+onnxruntime
+onnx
+flask>=2.3.0

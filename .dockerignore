@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+env/
+.Python
+
+# Git
+.git/
+.gitignore
+
+# Tests & Coverage
+tests/
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Documentation
+*.md
+docs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Environment
+.env
+.env.*
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Model artifacts (download at runtime)
+models/registry/*.pt
+models/registry/*.onnx
+
+# Large data files
+data/raw/
+data/processed/
+
+# Credentials
+credentials.json
+*-key.json

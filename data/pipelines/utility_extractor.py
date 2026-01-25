@@ -1,7 +1,9 @@
 import apache_beam as beam
 import yaml
+import os
 
-with open("config.yml", "r") as f:
+config_path = os.path.join(os.path.dirname(__file__), '..', '..', 'config', 'settings.yaml')
+with open(config_path, "r") as f:
     config = yaml.safe_load(f)
 
 class MarkUtility(beam.DoFn):

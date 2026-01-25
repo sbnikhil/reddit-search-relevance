@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  solr:
+    image: solr:9.4
+    container_name: reddit-solr
+    ports:
+      - "8983:8983"
+    volumes:
+      - ./infra/solr/solr-data:/var/solr/data
+      - solr-logs:/var/solr/logs
+    environment:
+      - SOLR_HEAP=1g
+    command:
+      - solr-precreate
+      - technical_search
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8983/solr/technical_search/admin/ping || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - reddit-network
+
+  app:
+    build: .
+    container_name: reddit-app
+    ports:
+      - "8501:8501"
+      - "8000:8000"
+    volumes:
+      - ./models/registry:/app/models/registry
+      - ./config:/app/config
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS:-}
+      - SOLR_URL=http://solr:8983/solr/technical_search
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      solr:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - reddit-network
+
+volumes:
+  solr-logs:
+
+networks:
+  reddit-network:
+    driver: bridge

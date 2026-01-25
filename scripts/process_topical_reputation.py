@@ -2,7 +2,7 @@ import yaml
 from google.cloud import bigquery
 from pathlib import Path
 
-def load_config(config_path="config.yml"):
+def load_config(config_path="config/settings.yaml"):
     with open(config_path, "r") as f:
         return yaml.safe_load(f)
 

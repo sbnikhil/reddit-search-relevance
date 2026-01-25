@@ -1,0 +1,22 @@
+# Model Registry
+
+This directory stores trained model artifacts.
+
+## Files
+
+- `reddit_ranker_v*.pt` - PyTorch model weights
+- `reddit_ranker_v*.onnx` - ONNX optimized models
+- `feature_norm_params.json` - Feature normalization parameters
+
+## Versioning
+
+Models are versioned according to `config/settings.yaml`:
+- Current version: 1.0.1
+- Update version after retraining
+
+## Storage
+
+For production:
+- Use cloud storage (GCS, S3)
+- Version control with DVC or MLflow
+- Track experiment metrics

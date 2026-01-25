@@ -1,10 +1,27 @@
+version: '3.8'
+
 services:
   solr:
-    image: solr:9.4 
+    image: solr:9.4
+    container_name: reddit-solr
     ports:
-      - "8983:8983" 
+      - "8983:8983"
     volumes:
       - ./solr-data:/var/solr/data
+    environment:
+      - SOLR_HEAP=1g
     command:
       - solr-precreate
-      - reddit_posts 
+      - technical_search
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8983/solr/technical_search/admin/ping || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - reddit-network
+
+networks:
+  reddit-network:
+    driver: bridge
+ 
