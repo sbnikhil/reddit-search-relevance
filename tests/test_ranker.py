@@ -25,8 +25,6 @@ def model():
     
     model.eval()
     return model
-    ORDER BY expertise_score DESC
-    LIMIT 10
 
 
 def test_model_initialization():
