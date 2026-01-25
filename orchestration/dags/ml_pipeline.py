@@ -8,45 +8,46 @@ from scripts.ingest_to_solr import RedditIndexer
 from scripts.train_ranker import train as start_training
 
 default_args = {
-    'owner': 'mle_intern',
-    'depends_on_past': False,
-    'email_on_failure': False,
-    'email_on_retry': False,
-    'retries': 1,
-    'retry_delay': timedelta(minutes=5),
+    "owner": "mle_intern",
+    "depends_on_past": False,
+    "email_on_failure": False,
+    "email_on_retry": False,
+    "retries": 1,
+    "retry_delay": timedelta(minutes=5),
 }
 
 with DAG(
-    'reddit_relevance_engine_v1',
+    "reddit_relevance_engine_v1",
     default_args=default_args,
-    description='End-to-end Reddit Search Relevance Pipeline',
-    schedule_interval=timedelta(days=1), 
+    description="End-to-end Reddit Search Relevance Pipeline",
+    schedule_interval=timedelta(days=1),
     start_date=datetime(2025, 1, 1),
     catchup=False,
-    tags=['reddit', 'relevance', 'mlops'],
+    tags=["reddit", "relevance", "mlops"],
 ) as dag:
 
     task_reputation = PythonOperator(
-        task_id='process_topical_reputation',
+        task_id="process_topical_reputation",
         python_callable=run_expertise_query,
     )
 
     task_utility = PythonOperator(
-        task_id='extract_utility_signals',
+        task_id="extract_utility_signals",
         python_callable=run_utility_pipeline,
     )
 
     def run_ingestion():
         from scripts.ingest_to_solr import main
+
         main()
-    
+
     task_ingestion = PythonOperator(
-        task_id='ingest_to_solr',
+        task_id="ingest_to_solr",
         python_callable=run_ingestion,
     )
 
     task_training = PythonOperator(
-        task_id='train_relevance_model',
+        task_id="train_relevance_model",
         python_callable=start_training,
     )
 

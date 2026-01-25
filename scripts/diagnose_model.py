@@ -1,6 +1,7 @@
 """
 Diagnostic script to understand why BERT model outputs near-zero predictions
 """
+
 import torch
 import yaml
 import os
@@ -17,24 +18,24 @@ try:
     device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 except:
     device = torch.device("cpu")
-tokenizer = AutoTokenizer.from_pretrained(cfg['training']['model_name'])
-bq_client = bigquery.Client(project=cfg['database']['project_id'])
+tokenizer = AutoTokenizer.from_pretrained(cfg["training"]["model_name"])
+bq_client = bigquery.Client(project=cfg["database"]["project_id"])
 
 # Load Model
 model = RedditRelevanceRanker(
-    cfg['training']['model_name'], 
-    cfg['training']['extra_feature_dim'],
-    dropout=cfg['model_params'].get('dropout_rate', 0.1)
+    cfg["training"]["model_name"],
+    cfg["training"]["extra_feature_dim"],
+    dropout=cfg["model_params"].get("dropout_rate", 0.1),
 ).to(device)
 
 model_file = f"reddit_ranker_v{cfg['artifacts']['version']}.pt"
-model_path = os.path.join(cfg['artifacts']['model_path'], model_file)
+model_path = os.path.join(cfg["artifacts"]["model_path"], model_file)
 model.load_state_dict(torch.load(model_path, map_location=device))
 model.eval()
 
-print("="*80)
+print("=" * 80)
 print("DIAGNOSIS 1: Check Training Data Distribution")
-print("="*80)
+print("=" * 80)
 
 # Check label distribution in training data
 sql = f"""
@@ -52,18 +53,18 @@ df_stats = bq_client.query(sql).to_dataframe()
 print("\nTraining Data Statistics:")
 print(df_stats.to_string())
 
-total = df_stats['count'].sum()
+total = df_stats["count"].sum()
 if len(df_stats) > 1:
-    class_0 = df_stats[df_stats['label'] == 0]['count'].values[0] if 0 in df_stats['label'].values else 0
-    class_1 = df_stats[df_stats['label'] == 1]['count'].values[0] if 1 in df_stats['label'].values else 0
+    class_0 = df_stats[df_stats["label"] == 0]["count"].values[0] if 0 in df_stats["label"].values else 0
+    class_1 = df_stats[df_stats["label"] == 1]["count"].values[0] if 1 in df_stats["label"].values else 0
     imbalance_ratio = max(class_0, class_1) / (min(class_0, class_1) + 1)
     print(f"\nClass Imbalance Ratio: {imbalance_ratio:.2f}:1")
     if imbalance_ratio > 10:
         print("WARNING: SEVERE CLASS IMBALANCE - Model will learn to predict majority class!")
 
-print("\n" + "="*80)
+print("\n" + "=" * 80)
 print("DIAGNOSIS 2: Test Model on Synthetic Examples")
-print("="*80)
+print("=" * 80)
 
 # Test 1: Obviously relevant pair
 query1 = "How to fix Python import error"
@@ -72,7 +73,7 @@ features1 = torch.tensor([[0.8, 0.9]], dtype=torch.float32).to(device)  # High e
 
 inputs1 = tokenizer(query1, doc1, return_tensors="pt", truncation=True, padding=True, max_length=128).to(device)
 with torch.no_grad():
-    logit1 = model(inputs1['input_ids'], inputs1['attention_mask'], features1)
+    logit1 = model(inputs1["input_ids"], inputs1["attention_mask"], features1)
     prob1 = torch.sigmoid(logit1).item()
 
 print(f"\nTest 1 - RELEVANT pair (high features):")
@@ -90,7 +91,7 @@ features2 = torch.tensor([[0.1, 0.1]], dtype=torch.float32).to(device)  # Low ex
 
 inputs2 = tokenizer(query2, doc2, return_tensors="pt", truncation=True, padding=True, max_length=128).to(device)
 with torch.no_grad():
-    logit2 = model(inputs2['input_ids'], inputs2['attention_mask'], features2)
+    logit2 = model(inputs2["input_ids"], inputs2["attention_mask"], features2)
     prob2 = torch.sigmoid(logit2).item()
 
 print(f"\nTest 2 - IRRELEVANT pair (low features):")
@@ -108,7 +109,7 @@ features3 = torch.tensor([[0.5, 0.5]], dtype=torch.float32).to(device)  # Defaul
 
 inputs3 = tokenizer(query3, doc3, return_tensors="pt", truncation=True, padding=True, max_length=128).to(device)
 with torch.no_grad():
-    logit3 = model(inputs3['input_ids'], inputs3['attention_mask'], features3)
+    logit3 = model(inputs3["input_ids"], inputs3["attention_mask"], features3)
     prob3 = torch.sigmoid(logit3).item()
 
 print(f"\nTest 3 - RELEVANT pair with DEFAULT features (0.5, 0.5):")
@@ -119,9 +120,9 @@ print(f"  Logit: {logit3.item():.4f}")
 print(f"  Probability: {prob3:.4f}")
 print(f"  Note: This is what eval uses! Should be >0.3 at least")
 
-print("\n" + "="*80)
+print("\n" + "=" * 80)
 print("DIAGNOSIS 3: Check Feature Statistics in Eval Data")
-print("="*80)
+print("=" * 80)
 
 issues_found = []
 
@@ -142,10 +143,10 @@ try:
     if len(df_eval) > 0:
         print("\nEvaluation Set Feature Statistics:")
         print(df_eval.to_string())
-        
-        if df_eval['std_expertise'].values[0] < 0.1:
+
+        if df_eval["std_expertise"].values[0] < 0.1:
             print("WARNING: Expertise scores have almost no variance!")
-        if df_eval['std_utility'].values[0] < 0.1:
+        if df_eval["std_utility"].values[0] < 0.1:
             print("WARNING: Utility scores have almost no variance!")
     else:
         print("\nNo evaluation data found at offset 5000")
@@ -154,9 +155,9 @@ except Exception as e:
     print(f"\nCould not fetch eval data: {e}")
     issues_found.append("Evaluation data query failed")
 
-print("\n" + "="*80)
+print("\n" + "=" * 80)
 print("DIAGNOSIS SUMMARY")
-print("="*80)
+print("=" * 80)
 
 if imbalance_ratio > 10:
     issues_found.append("Severe class imbalance in training data")
@@ -166,9 +167,11 @@ if prob3 < 0.3:
     issues_found.append("Model outputs near-zero for default features (0.5, 0.5)")
 
 # Check for feature scale mismatch
-avg_train_expertise = df_stats['avg_expertise'].mean()
+avg_train_expertise = df_stats["avg_expertise"].mean()
 if avg_train_expertise > 10:
-    issues_found.append(f"FEATURE SCALE MISMATCH: Training uses expertise~{avg_train_expertise:.0f}, inference uses 0.5!")
+    issues_found.append(
+        f"FEATURE SCALE MISMATCH: Training uses expertise~{avg_train_expertise:.0f}, inference uses 0.5!"
+    )
 
 if issues_found:
     print("\nISSUES FOUND:")
