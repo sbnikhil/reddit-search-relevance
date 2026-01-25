@@ -2,6 +2,7 @@ import pytest
 
 try:
     from data.pipelines.utility_extractor import MarkUtility
+
     APACHE_BEAM_AVAILABLE = True
 except ImportError:
     APACHE_BEAM_AVAILABLE = False
