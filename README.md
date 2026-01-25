@@ -268,12 +268,6 @@ This starts:
 - API server (port 5000)
 - Streamlit UI (port 8501)
 
-### Kubernetes
-
-```bash
-kubectl apply -f k8s/
-```
-
 ## Performance
 
 | Metric | Value |
@@ -306,29 +300,4 @@ The two-stage architecture balances:
 
 ## License
 
-MIT License - see LICENSE file for details
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests and linting
-5. Submit a pull request
-
-## Citation
-
-If you use this project in your research, please cite:
-
-```bibtex
-@software{reddit_search_relevance,
-  title={Reddit Search Relevance Engine},
-  author={Your Name},
-  year={2026},
-  url={https://github.com/yourusername/reddit-search-relevance}
-}
-```
-
-## Contact
-
-For questions or issues, please open a GitHub issue or contact: your.email@example.com
+MIT License - see LICENSE file for details.
