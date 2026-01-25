@@ -35,8 +35,9 @@ def test_model_initialization():
         dropout=cfg["model_params"].get("dropout_rate", 0.1),
     )
     assert model is not None
-    assert hasattr(model, "bert")
-    assert hasattr(model, "classifier")
+    assert hasattr(model, "transformer")
+    assert hasattr(model, "fc_text")
+    assert hasattr(model, "output")
 
 
 def test_model_forward_pass(model):
