@@ -1,69 +1,41 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-venv/
-env/
-ENV/
-*.egg-info/
-dist/
-build/
-
-# Jupyter
-.ipynb_checkpoints/
-*.ipynb
-
-# IDEs
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# Environment
+# Credentials & secrets — never commit these
+credentials.json
+*.json.key
+service_account*.json
 .env
 .env.local
 
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+
+# Virtual environment
+venv/
+.venv/
+
 # Model artifacts
-models/registry/*.pt
-models/registry/*.onnx
-models/registry/scaler.pkl
-
-# Keep normalization params
-!models/registry/feature_norm_params.json
-
-# Solr data
-infra/solr/solr-data/*/data/
-*.lock
-
-# Logs
-*.log
-logs/
+*.pt
+*.pth
+*.txt.model
+/tmp/
 
 # OS
 .DS_Store
 Thumbs.db
 
-# BigQuery credentials (specific patterns)
-credentials.json
-*-key.json
-service-account*.json
+# IDE
+.vscode/
+.idea/
 
-# But keep config and test files
-!config/*.json
-!tests/**/*.json
-!config/settings.yaml
-!models/registry/feature_norm_params.json
+# Jupyter
+.ipynb_checkpoints/
+notebooks/figures/*.png
 
-# Temporary files
-tmp/
-temp/
-*.tmp
-
-# Documentation (local only)
-FILE_AUDIT.md
-PROJECT_STATUS.md
-IMPLEMENTATION_PLAN.md
-ACTION_PLAN.md
+# Test / build
+.pytest_cache/
+ray_results/
+dist/
+build/
