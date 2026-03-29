@@ -1,54 +1,53 @@
 from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.python import PythonOperator
-
-from scripts.process_topical_reputation import run_expertise_query
-from data.pipelines.utility_extractor import run as run_utility_pipeline
-from scripts.ingest_to_solr import RedditIndexer
-from scripts.train_ranker import train as start_training
+from airflow.operators.bash import BashOperator
 
 default_args = {
-    "owner": "mle_intern",
+    "owner": "airflow",
     "depends_on_past": False,
+    "start_date": datetime(2024, 1, 1),
     "email_on_failure": False,
-    "email_on_retry": False,
     "retries": 1,
     "retry_delay": timedelta(minutes=5),
 }
 
 with DAG(
-    "reddit_relevance_engine_v1",
+    "esci_ml_pipeline",
     default_args=default_args,
-    description="End-to-end Reddit Search Relevance Pipeline",
-    schedule_interval=timedelta(days=1),
-    start_date=datetime(2025, 1, 1),
+    schedule_interval="@weekly",
     catchup=False,
-    tags=["reddit", "relevance", "mlops"],
+    tags=["esci", "search", "ml"],
 ) as dag:
 
-    task_reputation = PythonOperator(
-        task_id="process_topical_reputation",
-        python_callable=run_expertise_query,
+    load_bigquery = BashOperator(
+        task_id="load_esci_bigquery",
+        bash_command="python scripts/01_load_bigquery.py",
     )
 
-    task_utility = PythonOperator(
-        task_id="extract_utility_signals",
-        python_callable=run_utility_pipeline,
+    mine_hard_negatives = BashOperator(
+        task_id="mine_hard_negatives",
+        bash_command="python scripts/03_mine_hard_negatives.py",
     )
 
-    def run_ingestion():
-        from scripts.ingest_to_solr import main
-
-        main()
-
-    task_ingestion = PythonOperator(
-        task_id="ingest_to_solr",
-        python_callable=run_ingestion,
+    train_colbert = BashOperator(
+        task_id="train_colbert",
+        bash_command="python scripts/04_train_colbert.py --submit",
     )
 
-    task_training = PythonOperator(
-        task_id="train_relevance_model",
-        python_callable=start_training,
+    train_lambdamart = BashOperator(
+        task_id="train_lambdamart",
+        bash_command="python scripts/05_train_lambdamart.py --submit",
     )
 
-    [task_reputation, task_utility] >> task_ingestion >> task_training
+    evaluate = BashOperator(
+        task_id="evaluate",
+        bash_command="python scripts/06_evaluate.py",
+    )
+
+    deploy = BashOperator(
+        task_id="deploy",
+        bash_command="python scripts/07_deploy_vertex.py",
+    )
+
+    load_bigquery >> mine_hard_negatives >> train_colbert >> train_lambdamart >> evaluate >> deploy
