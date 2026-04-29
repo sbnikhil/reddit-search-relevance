@@ -12,11 +12,11 @@ jobs:
       - run: pytest tests/ -v
       - name: NDCG regression gate
         run: |
-          python scripts/02_bm25_baseline.py --sample 500
           python -c "
           import json
-          with open('results/baseline_bm25.json') as f:
+          with open('results/final_evaluation.json') as f:
               r = json.load(f)
-          assert r['ndcg_10'] > 0.25, f'BM25 NDCG@10 {r[\"ndcg_10\"]} below threshold'
-          print('NDCG gate passed')
+          assert r['colbert']['ndcg_10'] > 0.70, f'ColBERT NDCG@10 {r[\"colbert\"][\"ndcg_10\"]} below threshold'
+          assert r['lambdamart']['ndcg_10'] > 0.70, f'LambdaMART NDCG@10 {r[\"lambdamart\"][\"ndcg_10\"]} below threshold'
+          print('NDCG gate passed:', r['lambdamart']['ndcg_10'])
           "
