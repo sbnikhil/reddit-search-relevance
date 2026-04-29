@@ -1,303 +1,184 @@
-# Reddit Search Relevance Engine
+# E-Commerce Search Relevance Engine
 
-A production-ready semantic search system that combines traditional keyword search (BM25) with deep learning (BERT) to rank Reddit posts by relevance, expertise, and utility.
+A production-grade, 3-stage search relevance pipeline trained on Amazon's ESCI dataset.
+Combines BM25 lexical retrieval, ColBERT neural re-ranking, and LambdaMART learning-to-rank fusion — the same architecture class used in large-scale e-commerce search systems.
 
-## Overview
+---
 
-Traditional keyword-based search systems struggle with semantic understanding and context. This project implements a two-stage retrieval system that:
+## Results
 
-1. **Fast Retrieval**: Apache Solr performs BM25 keyword search to retrieve top candidates
-2. **Semantic Re-ranking**: BERT Cross-Encoder evaluates semantic relevance
-3. **Hybrid Fusion**: Combines both signals with community expertise and utility scores
+| Stage | NDCG@10 | MRR@10 | P@10 |
+|---|---|---|---|
+| BM25 Baseline | 0.6274 | 0.7170 | 0.9195 |
+| + ColBERT Re-ranking | 0.7442 | 0.8216 | 0.9390 |
+| + LambdaMART Fusion | **0.7553** | **0.8301** | **0.9412** |
 
-### Key Features
+ColBERT re-ranking delivers a **+18.6% NDCG@10 improvement** over BM25. LambdaMART fusion adds a further **+1.5%**, bringing the full pipeline to **+20.4% over BM25**.
 
-- **Two-Stage Retrieval Architecture**: Balances speed and accuracy
-- **BERT-based Semantic Understanding**: Cross-encoder model for query-document relevance
-- **Feature Fusion**: Integrates expertise and utility signals from community voting
-- **Production-Ready**: Docker containerization, CI/CD, monitoring endpoints
-- **Interactive Demo**: Streamlit UI for side-by-side comparison
+*Evaluated on 1,000 sampled queries from the ESCI test split.*
+
+---
 
 ## Architecture
 
 ```
-Query → Solr (BM25) → Top-K Candidates → BERT Re-Ranker → Hybrid Fusion → Ranked Results
-                                              ↑
-                                    Expertise + Utility Scores
+Query
+  │
+  ▼
+BM25 Retrieval (rank-bm25)
+  │  Top-100 candidates via lexical matching
+  │  ~5 ms
+  ▼
+ColBERT Re-ranking (bert-base-uncased + MaxSim)
+  │  Token-level late interaction across 100 candidates
+  │  Query encoder runs at inference; doc embeddings pre-computed
+  │  ~50 ms (GPU)
+  ▼
+LambdaMART Fusion (LightGBM)
+  │  10 features: BM25 score, ColBERT score, lexical overlaps, field lengths
+  │  Optimises NDCG directly via lambdarank objective
+  │  ~1 ms
+  ▼
+Top-K Results
 ```
 
-**Hybrid Score Formula**:
-```
-Score = α × BM25_normalized + (1-α) × BERT_score
-```
+**Why 3 stages?**
+BM25 is fast and handles exact lexical matches well but cannot distinguish semantic relationships. ColBERT captures token-level semantics but is too slow to score 1.8M products per query. LambdaMART fuses both signals and learns the optimal combination from labeled data. Each stage filters and re-ranks the previous stage's output, keeping latency under 60 ms end-to-end on GPU.
+
+---
+
+## Dataset
+
+**Amazon ESCI** (Explicit Semantic Context Information) — a real Amazon production dataset with 4-level graded relevance labels assigned by human annotators.
+
+| Metric | Value |
+|---|---|
+| Products | 1,802,772 |
+| Query-product pairs | 2,621,288 |
+| Unique queries | 130,652 |
+| Locales | English (69%), Japanese (17%), Spanish (14%) |
+| Train / Test | 99,684 / 30,969 queries |
+
+**Relevance labels:**
+
+| Label | Meaning | Gain | % of dataset |
+|---|---|---|---|
+| E — Exact | Direct answer to the query | 1.00 | 65.2% |
+| S — Substitute | Similar but not exact | 0.10 | 21.9% |
+| C — Complement | Related accessory | 0.01 | 2.9% |
+| I — Irrelevant | Not useful | 0.00 | 10.0% |
+
+The dataset is 65% Exact because it was sampled from Amazon's production search results — already pre-filtered by Amazon's own system. This is the opposite of web-crawl datasets. Hard negatives are deliberately mined to compensate.
+
+**BM25 signal quality (500-query sample):**
+
+| Label | Median BM25 score |
+|---|---|
+| Exact | 0.496 |
+| Complement | 0.410 |
+| Substitute | 0.245 |
+| Irrelevant | 0.069 |
+
+Complement products score higher than Substitutes on BM25 because they often contain the exact query product name in their title (e.g., "iPhone 14 case" when searching "iPhone 14"). ColBERT's semantic understanding resolves this ambiguity.
+
+---
+
+## Key Design Decisions
+
+**ColBERT over bi-encoders (Sentence-BERT)**
+E-commerce queries are short and ambiguous (median 3 tokens). ColBERT's token-level MaxSim interaction captures partial matches that a single dense vector misses — "running shoes" matching "lightweight trail running athletic shoe" token by token rather than as a single compressed representation.
+
+**LambdaMART over a cross-encoder**
+A cross-encoder (BERT scoring query+document jointly) would be more accurate but requires a forward pass per candidate. LambdaMART adds near-zero latency while learning to combine BM25 and ColBERT signals, including engineered features the neural model doesn't see (field-level overlaps, brand match, description presence).
+
+**Hard negative mining**
+With 65% Exact labels, random negatives would mostly be other Exact matches — uninformative for training. BM25 top-k mining retrieves products that look relevant lexically but are judged Irrelevant or Substitute, forcing the model to learn the distinction.
+
+**LambdaMART label mapping**
+ESCI float gains (1.0, 0.1, 0.01, 0.0) are mapped to integer levels (3, 2, 1, 0) with `label_gain=[0, 1, 3, 7]` matching the NDCG gain formula 2^r − 1. This ensures the objective directly optimises the evaluation metric.
+
+---
+
+## Known Limitations
+
+**Multilingual gap:** `bert-base-uncased` is English-only. Japanese (17%) and Spanish (14%) queries will underperform. The fix is switching the backbone to `xlm-roberta-base`, which handles all three locales. This is scoped as a follow-up.
+
+**ColBERT initialisation:** The model is trained from a general BERT checkpoint rather than an IR-pretrained checkpoint (e.g., ColBERT-v2 pre-trained on MS MARCO). Starting from MS MARCO would likely give better initial token representations and require fewer training epochs.
+
+**Re-encoding at serving time:** Document embeddings for BM25 top-100 candidates are re-encoded at query time rather than pre-computed. At batch size 100 on GPU this takes ~50 ms — acceptable, but a proper vector index (Vertex AI Matching Engine, FAISS) would reduce this to lookup latency for larger catalogs.
+
+---
 
 ## Tech Stack
 
-- **Search Engine**: Apache Solr 9.4 (BM25 indexing)
-- **ML Framework**: PyTorch 2.9.1
-- **Model**: BERT-base-uncased (109M parameters)
-- **Feature Engineering**: Apache Beam, BigQuery
-- **Orchestration**: Apache Airflow
-- **Containerization**: Docker Compose
-- **CI/CD**: GitHub Actions
-- **Demo**: Streamlit
+| Component | Tool | Role |
+|---|---|---|
+| First-stage retrieval | rank-bm25 | Lexical candidate generation |
+| Neural re-ranker | ColBERT (BERT + MaxSim) | Token-level late interaction scoring |
+| LTR fusion | LightGBM LambdaMART | NDCG-optimised feature fusion |
+| Training infra | Vertex AI Custom Jobs | GPU training (T4) |
+| Data warehouse | BigQuery | ESCI dataset + ColBERT score storage |
+| Serving | FastAPI + uvicorn | REST endpoint |
+| Containerisation | Docker + Cloud Run | Deployment |
+| CI | GitHub Actions | Test suite + NDCG regression gate |
 
-## Prerequisites
+---
 
-- Python 3.9+
-- Docker and Docker Compose
-- 8GB RAM minimum (16GB recommended)
-- CUDA-capable GPU (optional, CPU supported)
-
-## Quick Start
-
-### 1. Clone the Repository
+## Running the Pipeline
 
 ```bash
-git clone https://github.com/yourusername/reddit-search-relevance.git
-cd reddit-search-relevance
+# Setup
+bash setup.sh && source venv/bin/activate
+cp .env.example .env  # fill in GCP credentials
+
+# 1. Load ESCI data into BigQuery
+python scripts/01_load_bigquery.py
+
+# 2. Compute BM25 baseline
+python scripts/02_bm25_baseline.py
+
+# 3. Mine hard negatives for ColBERT training
+python scripts/03_mine_hard_negatives.py
+
+# 4. Train ColBERT on Vertex AI (T4 GPU, ~16 hrs for 5 epochs)
+python scripts/04_train_colbert.py --submit
+
+# 5. Generate ColBERT scores for all pairs (resumable)
+python scripts/08_generate_colbert_scores.py
+
+# 6. Train LambdaMART with real ColBERT features
+python scripts/05_train_lambdamart.py
+
+# 7. Evaluate all 3 stages
+python scripts/06_evaluate.py
+
+# 8. Deploy serving endpoint
+python scripts/07_deploy_vertex.py
 ```
 
-### 2. Start Apache Solr
+## Local Serving
 
 ```bash
-cd infra/solr
-docker-compose up -d
-cd ../..
+uvicorn serving.app:app --host 0.0.0.0 --port 8080
+# or
+docker-compose up
 ```
-
-Verify Solr is running:
-```bash
-curl http://localhost:8983/solr/admin/cores?action=STATUS
-```
-
-### 3. Install Dependencies
 
 ```bash
-pip install -r requirements.txt
-```
-
-### 4. Generate Sample Data
-
-```bash
-python scripts/create_sample_data.py
-```
-
-This creates 500 synthetic Reddit posts and indexes them to Solr.
-
-### 5. Train the Model
-
-```bash
-PYTHONPATH=. python scripts/train_ranker.py
-```
-
-Training takes approximately 2-3 minutes on CPU. The model will be saved to `models/registry/`.
-
-### 6. Launch Demo
-
-```bash
-streamlit run streamlit_app.py
-```
-
-Open your browser to `http://localhost:8501`
-
-## Project Structure
-
-```
-reddit-search-relevance/
-├── app.py                          # Flask API server
-├── streamlit_app.py                # Interactive demo UI
-├── config/
-│   └── settings.yaml               # Configuration
-├── data/
-│   ├── pipelines/
-│   │   └── utility_extractor.py    # Apache Beam pipeline
-│   └── sample_posts.json           # Generated sample data
-├── models/
-│   ├── arch/
-│   │   └── relevance_ranker.py     # BERT-based ranker architecture
-│   └── registry/
-│       ├── reddit_ranker_v1.0.1.pt # Trained model weights
-│       └── feature_norm_params.json # Feature normalization params
-├── scripts/
-│   ├── create_sample_data.py       # Generate synthetic data
-│   ├── train_ranker.py             # Model training script
-│   ├── ingest_to_solr.py           # Bulk indexing script
-│   └── evaluate.py                 # Model evaluation
-├── infra/
-│   └── solr/
-│       ├── docker-compose.yml      # Solr service configuration
-│       └── solr-data/              # Solr cores and schemas
-├── orchestration/
-│   └── dags/
-│       └── ml_pipeline.py          # Airflow DAG
-└── tests/
-    ├── test_pipeline.py
-    └── test_ranker.py
-```
-
-## Configuration
-
-Edit `config/settings.yaml` to customize:
-
-```yaml
-search_tuning:
-  solr_url: "http://localhost:8983/solr/reddit_posts"
-  k_recall: 50          # Number of candidates from Solr
-  alpha: 0.2            # Weight for BM25 (0.8 for BERT)
-
-training:
-  epochs: 10
-  batch_size: 16
-  learning_rate: 2e-5
-  model_name: "bert-base-uncased"
-
-model_params:
-  dropout_rate: 0.1
-```
-
-## API Usage
-
-### Start the API Server
-
-```bash
-python app.py
-```
-
-### Search Endpoint
-
-```bash
-curl -X POST http://localhost:5000/search \
+curl -X POST http://localhost:8080/search \
   -H "Content-Type: application/json" \
-  -d '{"query": "python async programming", "top_k": 10}'
+  -d '{"query": "noise cancelling headphones", "top_k": 5}'
 ```
 
-Response:
-```json
-{
-  "results": [
-    {
-      "id": "post_123",
-      "title": "Python async tutorial",
-      "body": "...",
-      "score": 0.856,
-      "expertise": 0.92,
-      "utility": 0.88
-    }
-  ],
-  "latency_ms": 127.3
-}
-```
-
-### Health Check
+## Tests
 
 ```bash
-curl http://localhost:5000/health
+pytest tests/ -v  # 34 tests across ColBERT, LambdaMART, and serving layers
 ```
 
-## Training with Custom Data
+---
 
-### Using BigQuery
+## EDA
 
-1. Set up Google Cloud credentials:
-```bash
-export GOOGLE_APPLICATION_CREDENTIALS="/path/to/credentials.json"
-```
-
-2. Update `config/settings.yaml`:
-```yaml
-database:
-  project_id: "your-gcp-project"
-  source_table: "project.dataset.reddit_posts"
-```
-
-3. Train:
-```bash
-PYTHONPATH=. python scripts/train_ranker.py
-```
-
-### Using Local Data
-
-Format your data as JSON:
-```json
-[
-  {
-    "id": "post_1",
-    "title": "...",
-    "body": "...",
-    "expertise_score": 0.85,
-    "utility_score": 0.92,
-    "label": 1
-  }
-]
-```
-
-Save to `data/sample_posts.json` and run training.
-
-## Development
-
-### Running Tests
-
-```bash
-pytest tests/ -v
-```
-
-### Code Formatting
-
-```bash
-black .
-flake8 .
-```
-
-### Building Docker Image
-
-```bash
-docker build -t reddit-search-relevance:latest .
-```
-
-## Deployment
-
-### Docker Compose (Full Stack)
-
-```bash
-docker-compose up -d
-```
-
-This starts:
-- Solr (port 8983)
-- API server (port 5000)
-- Streamlit UI (port 8501)
-
-## Performance
-
-| Metric | Value |
-|--------|-------|
-| Latency (p50) | <100ms |
-| Latency (p95) | <200ms |
-| Throughput | ~50 QPS |
-| Model Size | 420MB |
-| Index Size | ~2GB / 1M docs |
-
-## Model Details
-
-- **Architecture**: BERT Cross-Encoder + MLP Fusion Layer
-- **Parameters**: 109,589,125
-- **Input**: Query-document pairs + expertise + utility scores
-- **Output**: Relevance score (0-1)
-- **Training**: Binary Cross-Entropy Loss with gradient clipping
-
-## Background
-
-This project addresses the challenge of information retrieval in community-driven platforms where:
-- Users ask questions in varied language
-- Keyword matching alone fails to capture semantic intent
-- Community signals (expertise, utility) are strong relevance indicators
-
-The two-stage architecture balances:
-- **Speed**: Solr handles fast candidate retrieval
-- **Accuracy**: BERT provides semantic understanding
-- **Context**: Community features improve ranking quality
-
-## License
-
-MIT License - see LICENSE file for details.
+Key findings from exploratory analysis are documented in [docs/eda_findings.md](docs/eda_findings.md).
+Full analysis with figures: [notebooks/EDA.ipynb](notebooks/EDA.ipynb).
