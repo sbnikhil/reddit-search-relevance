@@ -1,4 +1,4 @@
-# E-Commerce Search Relevance Engine
+#Search Relevance Engine
 
 A production-grade, 3-stage search relevance pipeline trained on Amazon's ESCI dataset.
 Combines BM25 lexical retrieval, ColBERT neural re-ranking, and LambdaMART learning-to-rank fusion — the same architecture class used in large-scale e-commerce search systems.
