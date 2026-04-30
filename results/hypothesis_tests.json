@@ -1,0 +1,52 @@
+{
+  "test1_colbert_vs_bm25": {
+    "description": "Paired t-test: ColBERT NDCG@10 vs BM25 NDCG@10 across 1000 test queries",
+    "h0": "mean NDCG@10(ColBERT) = mean NDCG@10(BM25)",
+    "h1": "ColBERT NDCG@10 > BM25 NDCG@10",
+    "mean_colbert": 0.7313,
+    "mean_bm25": 0.6195,
+    "mean_delta": 0.1118,
+    "t_stat": 14.5391,
+    "p_value": 1.39e-43,
+    "cohens_d": 0.4598,
+    "effect_size": "small",
+    "significant": true,
+    "alpha": 0.05
+  },
+  "test2_ltr_vs_colbert": {
+    "description": "Paired t-test: LambdaMART NDCG@10 vs ColBERT NDCG@10 across 1000 test queries",
+    "h0": "mean NDCG@10(LambdaMART) = mean NDCG@10(ColBERT)",
+    "h1": "LambdaMART NDCG@10 > ColBERT NDCG@10",
+    "mean_ltr": 0.7126,
+    "mean_colbert": 0.7313,
+    "mean_delta": -0.0187,
+    "t_stat": -4.0533,
+    "p_value": 5.44e-05,
+    "cohens_d": -0.1282,
+    "effect_size": "small",
+    "significant": true,
+    "note": "LambdaMART is significantly worse than ColBERT alone due to training distribution mismatch. See docs/ltr_analysis.md.",
+    "alpha": 0.05
+  },
+  "test3_bm25_by_label": {
+    "description": "Kruskal-Wallis test: BM25 score distributions across ESCI relevance labels",
+    "h0": "BM25 score distribution is identical across all relevance labels",
+    "h1": "At least one label has a different BM25 score distribution",
+    "label_medians": {"Exact": 0.2593, "Substitute": 0.0413, "Complement": 0.1635, "Irrelevant": 0.0},
+    "label_means": {"Exact": 0.3365, "Substitute": 0.2232, "Complement": 0.2710, "Irrelevant": 0.1625},
+    "kruskal_h": 2048.401,
+    "p_value": 0.0,
+    "eta_squared": 0.0512,
+    "effect_size": "small",
+    "significant": true,
+    "pairwise_bonferroni": {
+      "Exact_vs_Substitute": {"p_corrected": 2.57e-99, "significant": true},
+      "Exact_vs_Complement": {"p_corrected": 1.23e-05, "significant": true},
+      "Exact_vs_Irrelevant": {"p_corrected": 0.0, "significant": true},
+      "Substitute_vs_Complement": {"p_corrected": 3.56e-06, "significant": true},
+      "Substitute_vs_Irrelevant": {"p_corrected": 1.82e-73, "significant": true},
+      "Complement_vs_Irrelevant": {"p_corrected": 2.14e-40, "significant": true}
+    },
+    "alpha": 0.05
+  }
+}
