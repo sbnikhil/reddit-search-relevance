@@ -1,14 +1,11 @@
 gcp:
-  project_id: "reddit-search-relevance-485717"
+  project_id: "search-relevance-500100"
   region: "us-central1"
-  data_bucket: "reddit-search-relevance-data"
-  models_bucket: "reddit-search-relevance-models"
+  data_bucket: "search-data-nikhil"
+  models_bucket: "search-models-nikhil"
   bq_dataset: "esci_search"
 
 data:
-  products_table: "reddit-search-relevance-485717.esci_search.products"
-  examples_table: "reddit-search-relevance-485717.esci_search.examples"
-  triplets_path: "gs://reddit-search-relevance-data/esci/triplets/train_triplets.parquet"
   label_gains:
     E: 1.0
     S: 0.1
@@ -20,25 +17,66 @@ colbert:
   dim: 128
   query_maxlen: 32
   doc_maxlen: 128
+  # Relative path under models_bucket/colbert/ — update after each training run
+  best_checkpoint: "epoch_5/model.pt"
+  temperature: 0.05
+  warmup_steps: 1000
   batch_size: 32
   epochs: 5
-  learning_rate: 3e-6
-  warmup_steps: 1000
-  temperature: 0.05
-  checkpoint_dir: "gs://reddit-search-relevance-models/colbert/"
+  learning_rate: 3.0e-6
 
 lambdamart:
-  num_leaves: 31
+  # Relative path under models_bucket
+  model_path: "ltr/lambdamart.txt"
+  # LightGBM lambdarank hyperparameters
+  num_leaves: 63
+  min_data_in_leaf: 50
   learning_rate: 0.05
-  n_estimators: 200
-  ndcg_eval_at: [10]
-  model_path: "gs://reddit-search-relevance-models/ltr/lambdamart.txt"
+  num_boost_round: 500
+  early_stopping_rounds: 50
+  feature_fraction: 0.8
+  bagging_fraction: 0.8
+  bagging_freq: 5
+  lambda_l1: 0.1
+  lambda_l2: 0.1
+  ndcg_eval_at: [1, 5, 10]
+  # Maps integer relevance level to NDCG gain: 2^gain - 1 for levels 0,1,2,3
+  label_gain: [0, 1, 3, 7]
 
 retrieval:
   bm25_top_k: 100
   colbert_top_k: 20
   final_top_k: 10
 
+training:
+  # Hard negative mining (script 03)
+  hard_neg_top_k: 50
+  hard_neg_rank_threshold: 20
+  # ColBERT score generation batch size (script 08, GPU inference)
+  score_gen_doc_batch: 128
+  # Save a GCS checkpoint every N queries during score generation
+  score_gen_checkpoint_every: 5000
+
+evaluation:
+  sample_queries: 1000
+  doc_batch: 64
+  # Two-tailed significance level for hypothesis tests
+  alpha: 0.05
+
 serving:
   host: "0.0.0.0"
   port: 8080
+  doc_encode_batch: 64
+  demo_catalog_size: 0
+  use_query_router: true
+
+# Contribution 1 — Query-conditioned LTR by Spearman ρ
+# When BM25 and ColBERT rank-order similarly (high ρ), their features are collinear and
+# LambdaMART extracts little additional signal. Separate models trained per-bin fix this.
+contribution1:
+  rho_low_threshold: 0.3   # ρ < 0.3  → models disagree → low-ρ model
+  rho_high_threshold: 0.6  # ρ > 0.6  → models agree   → high-ρ model
+  model_low:    "ltr/lambdamart_low.txt"
+  model_medium: "ltr/lambdamart_medium.txt"
+  model_high:   "ltr/lambdamart_high.txt"
+
