@@ -2,17 +2,28 @@ import pandas as pd
 import torch
 from torch.utils.data import Dataset
 from transformers import BertTokenizer
+from config import COLBERT_MODEL_NAME, COLBERT_MAXLEN_QUERY, COLBERT_MAXLEN_DOC
 
 
 class ESCITripletDataset(Dataset):
-    def __init__(self, parquet_path, model_name="bert-base-uncased", query_maxlen=32, doc_maxlen=128):
+    def __init__(
+        self,
+        parquet_path: str,
+        model_name: str = COLBERT_MODEL_NAME,
+        query_maxlen: int = COLBERT_MAXLEN_QUERY,
+        doc_maxlen: int = COLBERT_MAXLEN_DOC,
+        tokenizer=None,
+    ):
         self.df = pd.read_parquet(parquet_path)
-        self.tokenizer = BertTokenizer.from_pretrained(model_name)
-        self.tokenizer.add_special_tokens({"additional_special_tokens": ["[Q]", "[D]"]})
+        if tokenizer is not None:
+            self.tokenizer = tokenizer
+        else:
+            self.tokenizer = BertTokenizer.from_pretrained(model_name)
+            self.tokenizer.add_special_tokens({"additional_special_tokens": ["[Q]", "[D]"]})
         self.query_maxlen = query_maxlen
         self.doc_maxlen = doc_maxlen
 
-    def _tokenize(self, text, prefix, max_length):
+    def _tokenize(self, text: str, prefix: str, max_length: int):
         enc = self.tokenizer(
             f"{prefix} {text}",
             max_length=max_length,

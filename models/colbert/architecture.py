@@ -2,10 +2,11 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from transformers import BertModel
+from config import COLBERT_MODEL_NAME, COLBERT_DIM
 
 
 class ColBERT(nn.Module):
-    def __init__(self, model_name="bert-base-uncased", dim=128):
+    def __init__(self, model_name: str = COLBERT_MODEL_NAME, dim: int = COLBERT_DIM):
         super().__init__()
         self.bert = BertModel.from_pretrained(model_name)
         self.linear = nn.Linear(self.bert.config.hidden_size, dim)

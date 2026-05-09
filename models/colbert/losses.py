@@ -1,8 +1,9 @@
 import torch
 import torch.nn.functional as F
+from config import COLBERT_TEMPERATURE
 
 
-def colbert_loss(query_embs, pos_embs, neg_embs, model, temperature=0.05):
+def colbert_loss(query_embs, pos_embs, neg_embs, model, temperature: float = COLBERT_TEMPERATURE):
     B = query_embs.size(0)
     neg_scores = model.maxsim(query_embs, neg_embs)
     sim = torch.einsum('iqd,jld->ijql', query_embs, pos_embs)
