@@ -1,6 +1,19 @@
 import numpy as np
 import lightgbm as lgb
-from google.cloud import storage
+from config import LAMBDAMART_PARAMS, LTR_NUM_BOOST_ROUND, LTR_EARLY_STOPPING_ROUNDS
+
+
+def bm25_scores_for_group(query: str, titles: list, descriptions: list) -> np.ndarray:
+    """BM25 scores for a single query's candidate set, normalized 0-1."""
+    from rank_bm25 import BM25Okapi
+    corpus = [
+        ((t or "") + " " + (d or "")).lower().split() or [""]
+        for t, d in zip(titles, descriptions)
+    ]
+    scores = BM25Okapi(corpus).get_scores(query.lower().split())
+    max_s = scores.max()
+    return scores / max_s if max_s > 0 else scores
+
 
 # ESCI float gain -> integer relevance level for lambdarank (I=0, C=1, S=2, E=3)
 def gain_to_label(gain: float) -> int:
@@ -26,21 +39,8 @@ FEATURE_NAMES = [
     "query_length",
 ]
 
-PARAMS = {
-    "objective": "lambdarank",
-    "metric": "ndcg",
-    "ndcg_eval_at": [1, 5, 10],
-    "label_gain": [0, 1, 3, 7],
-    "learning_rate": 0.05,
-    "num_leaves": 63,
-    "min_data_in_leaf": 50,
-    "feature_fraction": 0.8,
-    "bagging_fraction": 0.8,
-    "bagging_freq": 5,
-    "lambda_l1": 0.1,
-    "lambda_l2": 0.1,
-    "verbose": -1,
-}
+# Alias: config is the single source of truth for all hyperparameters
+PARAMS = LAMBDAMART_PARAMS
 
 
 def _bigrams(tokens: list) -> set:
@@ -74,11 +74,11 @@ def build_features(
         title_query_overlap,
         desc_query_overlap,
         title_bigram_overlap,
-        float(bool(brand) and brand in query.lower()),   # brand_match
-        np.log1p(len(t_tokens)),                         # title_length
-        np.log1p(len(d_tokens)),                         # desc_length
-        float(bool(d_tokens)),                           # has_description
-        float(len(q_tokens)),                            # query_length
+        float(bool(brand) and brand in query.lower()),
+        np.log1p(len(t_tokens)),
+        np.log1p(len(d_tokens)),
+        float(bool(d_tokens)),
+        float(len(q_tokens)),
     ]
 
 
@@ -94,8 +94,8 @@ class LambdaMARTRanker:
         eval_features: np.ndarray | None = None,
         eval_labels: np.ndarray | None = None,
         eval_groups: list | None = None,
-        num_boost_round: int = 500,
-        early_stopping_rounds: int = 50,
+        num_boost_round: int = LTR_NUM_BOOST_ROUND,
+        early_stopping_rounds: int = LTR_EARLY_STOPPING_ROUNDS,
     ) -> None:
         train_set = lgb.Dataset(
             features, label=labels, group=groups, feature_name=FEATURE_NAMES
@@ -136,15 +136,11 @@ class LambdaMARTRanker:
         return dict(sorted(zip(FEATURE_NAMES, scores), key=lambda x: -x[1]))
 
     def save(self, gcs_path: str, local_path: str = "/tmp/lambdamart.txt") -> None:
+        from utils.gcs import upload
         self.model.save_model(local_path)
-        bucket = gcs_path.replace("gs://", "").split("/")[0]
-        blob = "/".join(gcs_path.replace("gs://", "").split("/")[1:])
-        storage.Client().bucket(bucket).blob(blob).upload_from_filename(local_path)
-        print(f"Model saved -> {gcs_path}")
+        upload(local_path, gcs_path)
 
     def load(self, gcs_path: str, local_path: str = "/tmp/lambdamart.txt") -> None:
-        bucket = gcs_path.replace("gs://", "").split("/")[0]
-        blob = "/".join(gcs_path.replace("gs://", "").split("/")[1:])
-        storage.Client().bucket(bucket).blob(blob).download_to_filename(local_path)
+        from utils.gcs import download
+        download(gcs_path, local_path)
         self.model = lgb.Booster(model_file=local_path)
-        print(f"Model loaded <- {gcs_path}")
