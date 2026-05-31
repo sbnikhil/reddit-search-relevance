@@ -1,0 +1,40 @@
+services:
+  - type: web
+    name: search-relevance-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: standard  # 2GB RAM — enough for ColBERT + BM25 over 50K products
+    healthCheckPath: /health
+    envVars:
+      # GCP credentials: paste your service account JSON as a single-line string
+      - key: GOOGLE_APPLICATION_CREDENTIALS_JSON
+        sync: false  # set manually in Render dashboard — never commit this
+
+      # GCP project settings
+      - key: GCP_PROJECT_ID
+        value: search-relevance-500100
+      - key: GCP_REGION
+        value: us-central1
+      - key: GCP_DATA_BUCKET
+        value: search-data-nikhil
+      - key: GCP_MODELS_BUCKET
+        value: search-models-nikhil
+      - key: BQ_DATASET
+        value: esci_search
+
+      # Demo mode: cap catalog at 50K products to stay within 2GB RAM
+      # Remove or set to 0 after upgrading to Pro plan (4GB)
+      - key: DEMO_CATALOG_SIZE
+        value: "50000"
+
+      # Disable heavy optional components on demo tier
+      - key: USE_QUERY_ROUTER
+        value: "false"  # Qwen2.5-3B (6GB) won't fit on Standard plan
+      - key: USE_TWO_TOWER_RETRIEVAL
+        value: "false"  # requires FAISS index in GCS — enable after script 16
+
+      # These can be enabled once models are trained and uploaded
+      - key: USE_CONDITIONED_LTR
+        value: "true"
+      - key: USE_COMPLEMENT_SUPPRESSION
+        value: "true"
