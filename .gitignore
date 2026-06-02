@@ -39,3 +39,8 @@ notebooks/figures/*.png
 ray_results/
 dist/
 build/
+
+# Data files — use BigQuery/GCS, not git
+*.parquet
+*.csv
+*.tsv
