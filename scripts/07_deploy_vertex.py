@@ -1,8 +1,12 @@
+import os
+import sys
+
 from google.cloud import aiplatform
 
-PROJECT_ID = "reddit-search-relevance-485717"
-REGION = "us-central1"
-MODEL_ARTIFACT_URI = "gs://reddit-search-relevance-models/colbert/final/"
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from config import PROJECT_ID, REGION, MODELS_BUCKET
+
+MODEL_ARTIFACT_URI = f"gs://{MODELS_BUCKET}/colbert/final/"
 
 
 def main():
