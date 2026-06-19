@@ -1,21 +1,37 @@
 # Search Relevance Engine
 
-A production-grade, 3-stage search relevance pipeline trained on Amazon's ESCI dataset.
-Combines BM25 lexical retrieval, ColBERT neural re-ranking, and LambdaMART learning-to-rank fusion — the same architecture class used in large-scale e-commerce search systems.
+End-to-end product search pipeline trained on Amazon's ESCI dataset (1.8M products, 130K queries).
+Two novel contributions: **ρ-conditioned rationale distillation** for cross-encoder training, and the **first honest end-to-end evaluation** on TREC Product Search 2023 — exposing how much published ESCI benchmarks overstate real retrieval quality.
 
 ---
 
 ## Results
 
-| Stage | NDCG@10 | MRR@10 | P@10 |
-|---|---|---|---|
-| BM25 Baseline | 0.6274 | 0.7170 | 0.9195 |
-| + ColBERT Re-ranking | 0.7442 | 0.8216 | 0.9390 |
-| + LambdaMART Fusion | **0.7553** | **0.8301** | **0.9412** |
+### Re-ranking evaluation (ESCI editorial pool, Protocol A)
+*Comparable to published ESCI papers — pre-selected candidates, ~20 per query*
 
-ColBERT re-ranking delivers a **+18.6% NDCG@10 improvement** over BM25. LambdaMART fusion adds a further **+1.5%**, bringing the full pipeline to **+20.4% over BM25**.
+| System | NDCG@10 | MRR@10 |
+|---|---|---|
+| BM25 Baseline | 0.6329 | 0.7077 |
+| ColBERT Re-ranking | **0.7622** | **0.8312** |
+| LambdaMART Fusion | 0.7544 | 0.8270 |
+| Cross-encoder (in progress) | TBD | TBD |
 
-*Evaluated on 1,000 sampled queries from the ESCI test split.*
+> **Finding:** LambdaMART degrades ColBERT by −0.008 NDCG@10. Root cause: a single LambdaMART
+> trained on all queries learns unstable feature weights when BM25 and ColBERT rankings are
+> orthogonal (low Spearman ρ). Documented in `results/ltr_regression_analysis.json`.
+> Cross-encoder replaces LambdaMART in the new architecture.
+
+*NDCG computed with gain=[0,1,3,7] for [I/C, S, E] matching LambdaMART's training objective.*
+
+### End-to-end retrieval (TREC Product Search 2023, Protocol B)
+*First measurement retrieving from the full 1.8M catalog — honest evaluation*
+
+| System | NDCG@10 | Note |
+|---|---|---|
+| BM25 | TBD | Establishing baseline |
+| BM25 + FAISS hybrid | TBD | Dense + sparse |
+| Full pipeline | TBD | Hybrid + cross-encoder |
 
 ---
 
@@ -24,26 +40,26 @@ ColBERT re-ranking delivers a **+18.6% NDCG@10 improvement** over BM25. LambdaMA
 ```
 Query
   │
-  ▼
-BM25 Retrieval (rank-bm25)
-  │  Top-100 candidates via lexical matching
-  │  ~5 ms
-  ▼
-ColBERT Re-ranking (bert-base-uncased + MaxSim)
-  │  Token-level late interaction across 100 candidates
-  │  Query encoder runs at inference; doc embeddings pre-computed
-  │  ~50 ms (GPU)
-  ▼
-LambdaMART Fusion (LightGBM)
-  │  10 features: BM25 score, ColBERT score, lexical overlaps, field lengths
-  │  Optimises NDCG directly via lambdarank objective
-  │  ~1 ms
-  ▼
-Top-K Results
+  ▼ [Query Router — rule-based, 0ms]
+  │  ≤2 or 3-4 tokens → BM25 top-50 + FAISS top-50 → RRF → top-100
+  │  ≥5 tokens       → BM25 top-100 only (long queries are already specific)
+  │
+  ▼ [Stage 1: Hybrid Retrieval]
+  │  BM25 (rank-bm25, 1.8M products)  ~5ms
+  │  FAISS IVFFlat (ColBERT [CLS] embeddings, dim=128, n_centroids=2048)  ~2ms
+  │  Reciprocal Rank Fusion (k=60)
+  │
+  ▼ [Stage 2: Cross-Encoder Re-ranking]
+  │  ModernBERT-base backbone
+  │  Input: [CLS] query [SEP] title [SEP] description
+  │  Output: P(E) + 0.1·P(S) + 0.01·P(C)
+  │  Trained with ρ-conditioned rationale distillation
+  │
+  ▼ Top-20 results
 ```
 
-**Why 3 stages?**
-BM25 is fast and handles exact lexical matches well but cannot distinguish semantic relationships. ColBERT captures token-level semantics but is too slow to score 1.8M products per query. LambdaMART fuses both signals and learns the optimal combination from labeled data. Each stage filters and re-ranks the previous stage's output, keeping latency under 60 ms end-to-end on GPU.
+**One model per role:** ColBERT = dense retriever (FAISS index only). Cross-encoder = re-ranker.
+LambdaMART kept for ablation comparison, not in the production path.
 
 ---
 
